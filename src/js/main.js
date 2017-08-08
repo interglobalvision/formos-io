@@ -11,7 +11,7 @@ Site = {
     });
 
     $(document).ready(function () {
-
+      _this.Video.init();
     });
 
   },
@@ -29,6 +29,37 @@ Site = {
       $(this).html(string);
     });
   },
+};
+
+Site.Video = {
+  threshold: 300, //in px
+  init:  function() {
+    var _this = this;
+
+    _this.$video = $('#splash-video');
+
+    _this.$video.on('canplaythrough', _this.handleCanPlayThrough.bind(_this));
+
+  },
+
+  handleCanPlayThrough: function() {
+    var _this = this;
+
+    _this.videoDuration = _this.$video[0].duration;
+
+    _this.bindScroll();
+  },
+
+  bindScroll: function() {
+    var _this = this;
+
+    _this.videoScroll = scrollMonitor.create(_this.$video[0], { top: _this.threshold });
+
+    _this.videoScroll.fullyEnterViewport(function() {
+      _this.$video[0].play();
+    });
+
+  }
 };
 
 Site.init();
