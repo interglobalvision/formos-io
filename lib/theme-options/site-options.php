@@ -29,6 +29,16 @@ $metabox = array(
       ),
     ),
 
+    array(
+      'name' => __( 'MP4 reversed', 'IGV' ),
+      'desc' => __( '', 'IGV' ),
+      'id'   => $prefix . 'splash_video_reversed_mp4',
+      'type' => 'file',
+      'query_args' => array(
+        'type' => 'video/mp4', // Make library only display PDFs.
+      ),
+    ),
+
     // Social Media
     array(
       'name' => __( 'Social Media', 'cmb2' ),
