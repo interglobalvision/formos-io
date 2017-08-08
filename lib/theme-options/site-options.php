@@ -11,6 +11,25 @@ $metabox = array(
   'show_on'    => array( 'key' => 'options-page', 'value' => array( $page_key ), ), //value must be same as id
   'show_names' => true,
   'fields'     => array(
+
+    // Social Media
+    array(
+      'name' => __( 'Video', 'cmb2' ),
+      'desc' => __( '', 'cmb2' ),
+      'id'   => $prefix . 'splash_video_title',
+      'type' => 'title',
+    ),
+    array(
+      'name' => __( 'MP4', 'IGV' ),
+      'desc' => __( '', 'IGV' ),
+      'id'   => $prefix . 'splash_video_mp4',
+      'type' => 'file',
+      'query_args' => array(
+        'type' => 'video/mp4', // Make library only display PDFs.
+      ),
+    ),
+
+    // Social Media
     array(
       'name' => __( 'Social Media', 'cmb2' ),
       'desc' => __( 'urls and accounts for different social media platforms. For use in menus and metadata', 'cmb2' ),
