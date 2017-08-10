@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "lazysizes": "^2.0.4",
-    "scrollMonitor": "stutrek/scrollMonitor#^1.2.3"
+    "lazysizes": "^2.0.4"
   }
 }
