@@ -37,11 +37,12 @@ Site.Video = {
   init:  function() {
     var _this = this;
 
+    _this.$container = $('#splash-video-container');
+
     // Selector for both videos
     _this.$videos = $('.splash-video');
-
-    // First video
     _this.$video1 = $('#splash-video-1');
+    _this.$video2 = $('#splash-video-2');
 
     _this.$video1.on('canplaythrough', _this.handleCanPlayThrough.bind(_this));
 
@@ -51,85 +52,76 @@ Site.Video = {
     // TODO: Get threshold based on video position/margin/something
     _this.threshold = 100;
 
+    // Create waypoint
+    _this.Waypoint = new Waypoint({
+      element: _this.$container[0],
+      handler: _this.handleWaypoint.bind(this),
+      offset: -300,
+      enabled: false,
+    });
+
   },
 
   handleCanPlayThrough: function() {
     var _this = this;
 
     // Bind scroll
-    _this.bindScroll();
+    _this.Waypoint.enable();
   },
 
-  bindScroll: function() {
+  bindWaypoint: function() {
     var _this = this;
 
-    // On window scroll
-    $(window).scroll(function(event) {
-      // Get the scroll position
-      var scrollTop = $(window).scrollTop();
-
-      // ...handle it
-      _this.handleScroll(scrollTop);
-    });
   },
 
-  handleScroll: function(scrollTop) {
+  handleWaypoint: function(direction) {
     var _this = this;
 
-    if(_this.canAutoplay) {
-      if(!_this.toPlay && scrollTop > _this.threshold) { // First video is to play and postition is below threshold
-        _this.playAndSwitch();
-      } else if(_this.toPlay && scrollTop < _this.threshold * 0.8) { // second video is to play and postition is above threshold * 0.8. Value was made up, it will change based on design
-        _this.playAndSwitch();
+    // Check if browser can autoplay and it's not playing
+    if(_this.canAutoplay && !_this.playing) {
+      if(direction == 'down') { // First video is to play and postition is below threshold
+        _this.playAndSwitch(_this.$video1);
+      } else if(direction === 'up') { // second video is to play and postition is above threshold * 0.8. Value was made up, it will change based on design
+        _this.playAndSwitch(_this.$video2);
       }
     }
   },
 
-  playAndSwitch: function() {
+  playAndSwitch: function($videoToPlay) {
     var _this = this;
 
-    // Get video to play
-    var $videoToPlay = $(_this.$videos[_this.toPlay]);
+    console.log('playing', $videoToPlay);
 
-    // Check it isn't playing already
-    if(!_this.playing) {
+    // Play video
+    $videoToPlay[0].play();
 
-      // Play video
+    // Set playing to true
+    _this.playing = true;
+
+    // Listen for video ended event
+    $videoToPlay.on('ended', function(event) {
+      // Remove event
+      $videoToPlay.off('ended');
+
+      // Set playing to false
+      _this.playing = false;
+
+      // Switch videos
+      _this.$videos.removeClass('u-hidden');
+      $videoToPlay.addClass('u-hidden');
+
+      // Reset position to 0
+      $videoToPlay[0].position = 0;
       $videoToPlay[0].play();
+      $videoToPlay[0].pause();
 
-      // Set playing to true
-      _this.playing = true;
+      // DEBUG
+      if(WP.wp_debug) {
+        var notHidden = _this.$videos.filter(':not(.u-hidden)');
+        $('#video-displayed').text(notHidden[0].id);
+      }
 
-      // Listen for video ended event
-      $videoToPlay.on('ended', function(event) {
-        // Set playing to false
-        _this.playing = false;
-
-        // Switch videos
-        _this.$videos.removeClass('u-hidden');
-        $videoToPlay.addClass('u-hidden');
-
-        // Reset position to 0
-        $videoToPlay[0].position = 0;
-        $videoToPlay[0].play();
-        $videoToPlay[0].pause();
-
-        // Switch toPlay value
-        _this.toPlay = _this.toPlay ? 0 : 1;
-
-        // Remove event
-        $videoToPlay.off('ended');
-
-        // DEBUG
-        if(WP.wp_debug) {
-          $('#video-displayed').text(_this.toPlay);
-        }
-
-        // Recheck scroll position in case user scrolled while playing
-        _this.handleScroll($(window).scrollTop());
-
-      });
-    }
+    });
   },
 };
 
