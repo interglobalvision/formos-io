@@ -43,7 +43,7 @@ Site.Video = {
     // First video
     _this.$video1 = $('#splash-video-1');
 
-    _this.$video1.on('canplaythrough', _this.handleCanPlayThrough.bind(_this));
+    _this.$video1.on('canplaythrough.video1', _this.handleCanPlayThrough.bind(_this));
 
     // TODO: Detect can autoplay
     _this.canAutoplay = true;
@@ -55,6 +55,9 @@ Site.Video = {
 
   handleCanPlayThrough: function() {
     var _this = this;
+
+    // Unbind from this event so it only happens once
+    _this.$video1.off('canplaythrough.video1');
 
     // Bind scroll
     _this.bindScroll();
@@ -110,9 +113,7 @@ Site.Video = {
         $videoToPlay.addClass('u-hidden');
 
         // Reset position to 0
-        $videoToPlay[0].position = 0;
-        $videoToPlay[0].play();
-        $videoToPlay[0].pause();
+        $videoToPlay[0].currentTime = 0;
 
         // Switch toPlay value
         _this.toPlay = _this.toPlay ? 0 : 1;
