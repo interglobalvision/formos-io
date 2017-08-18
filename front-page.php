@@ -7,7 +7,7 @@ get_header();
   <div class="container padding-bottom-basic">
     <div class="grid-row">
       <div class="grid-item item-s-12 text-align-center">
-        // logo
+        //*** logo
 
         <h2 class="font-size-large">The first modular entertainment system.</h2>
       </div>
@@ -40,9 +40,25 @@ get_header();
 
   <div class="container padding-bottom-basic">
     <div class="grid-row">
-      <div class="grid-item item-s-12 text-align-center">
+      <div class="grid-item item-s-12 text-align-center margin-bottom-small">
         <h2 class="font-size-basic">How formOS works</h2>
-        // how it works grid layout
+      </div>
+    </div>
+    <div class="grid-row justify-center text-align-center">
+      <div class="grid-item item-s-3">
+        formOS game/app library
+      </div>
+      <div class="grid-item item-s-1">
+        Download into your own device
+      </div>
+      <div class="grid-item item-s-3">
+        Your own device
+      </div>
+      <div class="grid-item item-s-1">
+        Wireless communication
+      </div>
+      <div class="grid-item item-s-3">
+        formOS units
       </div>
     </div>
   </div>
