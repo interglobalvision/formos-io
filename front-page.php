@@ -7,7 +7,7 @@ get_header();
   <div class="container padding-bottom-basic">
     <div class="grid-row">
       <div class="grid-item item-s-12 text-align-center">
-        //*** logo
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
 
         <h2 class="font-size-large">The first modular entertainment system.</h2>
       </div>
