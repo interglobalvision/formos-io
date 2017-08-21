@@ -38,30 +38,7 @@ get_header();
 
   <?php get_template_part('partials/front-page/countdown'); ?>
 
-  <div class="container padding-bottom-basic">
-    <div class="grid-row">
-      <div class="grid-item item-s-12 text-align-center margin-bottom-small">
-        <h2 class="font-size-basic">How formOS works</h2>
-      </div>
-    </div>
-    <div class="grid-row justify-center text-align-center">
-      <div class="grid-item item-s-3">
-        formOS game/app library
-      </div>
-      <div class="grid-item item-s-1">
-        Download into your own device
-      </div>
-      <div class="grid-item item-s-3">
-        Your own device
-      </div>
-      <div class="grid-item item-s-1">
-        Wireless communication
-      </div>
-      <div class="grid-item item-s-3">
-        formOS units
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('partials/front-page/how-works'); ?>
 
   <?php get_template_part('partials/front-page/modules'); ?>
 
