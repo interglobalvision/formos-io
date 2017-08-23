@@ -2,7 +2,7 @@
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center">
       <h2 class="font-size-basic">Countdown to Kickstarter campaign:</h2>
-      <div id="countdown" class="grid-row justify-center font-size-small">
+      <div id="countdown" class="grid-row justify-center font-size-small color-gray">
         <div class="grid-item">
           <div id="countdown-days" class="font-size-extra">30</div>
           Days

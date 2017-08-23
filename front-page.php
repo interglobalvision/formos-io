@@ -9,7 +9,7 @@ get_header();
       <div class="grid-item item-s-12 item-l-8 offset-l-2 text-align-center">
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
 
-        <h2 class="font-size-extra">The first modular entertainment system.</h2>
+        <h2 class="font-size-extra color-gray">The first modular entertainment system.</h2>
       </div>
     </div>
   </div>
@@ -19,8 +19,8 @@ get_header();
   <div class="container padding-bottom-basic">
     <div class="grid-row">
       <div class="grid-item item-s-12 item-m-10 offset-m-1 item-l-8 offset-l-2 text-align-center">
-        <h2 class="font-size-extra font-uppercase js-fix-widows">Play with the power of nature</h2>
-        <h3 class="font-size-large js-fix-widows">Enter formOS, an entertainment system inspired by the modular qualities of Nature — a uniquely powerful gaming experience.</h3>
+        <h2 class="font-size-extra color-gray font-uppercase js-fix-widows">Play with the power of nature</h2>
+        <h3 class="font-size-large color-gray js-fix-widows">Enter formOS, an entertainment system inspired by the modular qualities of Nature — a uniquely powerful gaming experience.</h3>
       </div>
     </div>
   </div>
