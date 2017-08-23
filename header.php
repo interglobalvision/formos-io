@@ -27,6 +27,24 @@
 
 <section id="main-container">
 
-  <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+  <header id="header" class="padding-top-tiny padding-bottom-tiny margin-bottom-basic">
+    <div class="container">
+      <div class="grid-row align-items-center">
+        <div class="grid-item item-m-3">
+          <h1 class="u-hidden"><?php bloginfo('name'); ?></h1>
+          <div id="header-logo-holder">
+            <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
+          </div>
+        </div>
+        <div class="grid-item item-m-9 padding-bottom-micro">
+          <ul class="grid-row justify-around font-uppercase">
+            <li class="grid-item">What is formOS?</li>
+            <li class="grid-item">How does it work?</li>
+            <li class="grid-item">The ignite kit</li>
+            <li class="grid-item">Our demos</li>
+            <li class="grid-item">Sign up</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
