@@ -25,7 +25,7 @@ get_header();
     </div>
   </div>
 
-  <div class="container padding-bottom-basic">
+  <div id="section-what-is" class="container padding-bottom-basic">
     <div class="grid-row">
       <div class="grid-item item-s-12 item-m-10 offset-m-1 item-l-8 offset-l-2 text-align-center">
         <h2 class="font-size-mid js-fix-widows">But what exactly is formOS</h2>

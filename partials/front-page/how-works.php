@@ -1,4 +1,4 @@
-<div class="container padding-bottom-basic">
+<div id="section-how" class="container padding-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-small">
       <h2 class="font-size-mid js-fix-widows">How formOS works</h2>

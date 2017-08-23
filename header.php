@@ -38,11 +38,11 @@
         </div>
         <div class="grid-item item-m-9 padding-bottom-micro">
           <ul class="grid-row justify-around font-uppercase">
-            <li class="grid-item">What is formOS?</li>
-            <li class="grid-item">How does it work?</li>
-            <li class="grid-item">The ignite kit</li>
-            <li class="grid-item">Our demos</li>
-            <li class="grid-item">Sign up</li>
+            <li class="grid-item u-pointer js-scrollto" data-scroll="what-is">What is formOS?</li>
+            <li class="grid-item u-pointer js-scrollto" data-scroll="how">How does it work?</li>
+            <li class="grid-item u-pointer js-scrollto" data-scroll="modules">The ignite kit</li>
+            <li class="grid-item u-pointer js-scrollto" data-scroll="demos">Our demos</li>
+            <li class="grid-item u-pointer js-scrollto" data-scroll="footer-signup">Sign up</li>
           </ul>
         </div>
       </div>
