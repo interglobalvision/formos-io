@@ -1,4 +1,4 @@
-<div class="container padding-bottom-basic">
+<div id="section-footer-signup" class="container padding-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
