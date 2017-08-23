@@ -6,6 +6,8 @@ Site = {
   init: function() {
     var _this = this;
 
+    _this.fixWidows();
+
     $(window).resize(function(){
       _this.onResize();
     });
