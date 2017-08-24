@@ -80,6 +80,18 @@ function igv_register_theme_options_metabox() {
   ) );
 
   $front_page_options->add_group_field($modules_group, array(
+    'name'    => esc_html__( 'Description', 'cmb2' ),
+    'id'      => 'module_desc',
+    'type'    => 'textarea_small',
+  ) );
+
+  $front_page_options->add_group_field($modules_group, array(
+    'name'    => esc_html__( 'Specs', 'cmb2' ),
+    'id'      => 'module_specs',
+    'type'    => 'textarea_small',
+  ) );
+
+  $front_page_options->add_group_field($modules_group, array(
     'name'    => esc_html__( 'Video', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
     'id'      => 'module_video_mp4',
