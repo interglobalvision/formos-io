@@ -59,6 +59,20 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Countdown', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'countdown_title',
+    'type'    => 'title',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'End time', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'countdown_end',
+    'type'    => 'text_datetime_timestamp_timezone',
+  ) );
+
   // Site options for general data
 
   $site_options = new_cmb2_box( array(
