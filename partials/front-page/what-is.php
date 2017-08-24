@@ -17,9 +17,14 @@
   <div class="grid-row">
     <div class="grid-item item-s-12 item-m-10 offset-m-1 text-align-center">
       <h2 class="font-size-basic margin-bottom-basic js-fix-widows">See formOS in action:</h2>
-      <video id="what-is-video" preload width="100%" muted>
-        <source src="<?php echo $front_page_options['what_is_video'];?>" type="video/mp4">
-      </video>
+      <div id="what-is-video-player" class="u-pointer">
+        <nav id="what-is-video-play-trigger" class="u-flex-center">
+          <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/play_button.svg'); ?>
+        </nav>
+        <video id="what-is-video" preload width="100%" muted loop>
+          <source src="<?php echo $front_page_options['what_is_video'];?>" type="video/mp4">
+        </video>
+      </div>
     </div>
   </div>
 </div>
