@@ -32,22 +32,22 @@
       <div id="countdown" class="grid-row justify-center font-size-small color-gray" data-end="<?php echo $end->format('U'); ?>">
         <div class="grid-item">
           <div id="countdown-days" class="font-size-countdown"><?php echo floor($daysLeft); ?></div>
-          Days
+          <span class="desktop-only">Days</span>
         </div>
         <div class="grid-item no-gutter font-size-countdown">:</div>
         <div class="grid-item">
           <div id="countdown-hours" class="font-size-countdown"><?php echo floor($hoursLeft); ?></div>
-          Hours
+          <span class="desktop-only">Hours</span>
         </div>
         <div class="grid-item no-gutter font-size-countdown">:</div>
         <div class="grid-item">
           <div id="countdown-minutes" class="font-size-countdown"><?php echo floor($minutesLeft); ?></div>
-          Minutes
+          <span class="desktop-only">Minutes</span>
         </div>
         <div class="grid-item no-gutter font-size-countdown">:</div>
         <div class="grid-item">
           <div id="countdown-seconds" class="font-size-countdown"><?php echo floor($minutesLeftSecondsRemainder); ?></div>
-          Seconds
+          <span class="desktop-only">Seconds</span>
         </div>
       </div>
     </div>
