@@ -28,6 +28,10 @@ normalize()
 // TYPOGRAPHY
 
 @import '../../globie-library/type'
+@import 'fonts/aileron'
+
+$font-sans = 'Aileron Regular', font-stack('Arial')
+$font-serif = font-stack('Georgia')
 
 $font-size-larger = 1.3rem
 
@@ -35,8 +39,7 @@ $font-leading-basic = 1.35
 $font-leading-tighter = 1.15
 $font-leading-larger = 1.45
 
-$font-tracking-basic = .001em
-$font-tracking-wider = .05em
+$font-tracking-basic = .2em
 
 html
   font-family: $font-sans
@@ -66,6 +69,14 @@ body
 
 $color-black = rgb(0, 0, 0)
 $color-white = rgb(255, 255, 255)
+$color-gray = rgb(206, 209, 229)
+$color-blue = rgb(206, 208, 229)
+
+$transition-speed = .7s
+$transition-speed-fast = .2s
+
+.color-gray
+  color: $color-gray
 
 // ******************************************************
 
@@ -99,15 +110,17 @@ $margin-mid = ($gutter * 3.5)
 $margin-large = ($gutter * 5)
 
 $font-size-basic = 18px
-$font-size-h1 = 48px
-$font-size-h2 = 38px
-$font-size-h3 = 30px
+$font-size-extra = 36px
+$font-size-large = 28px
+$font-size-mid = 22px
+$font-size-small = 15px
+$font-size-tiny = 12px
 
 grid(96%, $gutter, s)
 
 space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
-font-sizes($font-size-basic, $font-size-h1, $font-size-h2, $font-size-h3)
+font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny)
 
 @import 'responsive/mobile'
 
@@ -122,13 +135,18 @@ font-sizes($font-size-basic, $font-size-h1, $font-size-h2, $font-size-h3)
   $margin-mid = ($gutter * 3.5)
   $margin-large = ($gutter * 5)
 
-  $font-size-basic = 20px
+  $font-size-basic = 24px
+  $font-size-extra = 50px
+  $font-size-large = 38px
+  $font-size-mid = 30px
+  $font-size-small = 20px
+  $font-size-tiny = 17px
 
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
   grid(680px, $gutter, m)
 
-  font-sizes($font-size-basic)
+  font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny)
 
   .mobile-only
     display: none !important
@@ -146,13 +164,18 @@ font-sizes($font-size-basic, $font-size-h1, $font-size-h2, $font-size-h3)
   $margin-mid = ($gutter * 3.5)
   $margin-large = ($gutter * 5)
 
-  $font-size-basic = 22px
+  $font-size-basic = 30px
+  $font-size-extra = 72px
+  $font-size-large = 50px
+  $font-size-mid = 45px
+  $font-size-small = 23px
+  $font-size-tiny = 21px
 
   grid(1000px, $gutter, l)
 
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
-  font-sizes($font-size-basic)
+  font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny)
 
   .desktop-only
     display: initial !important

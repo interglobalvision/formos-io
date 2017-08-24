@@ -1,19 +1,18 @@
 <?php
 
-$video = IGV_get_option('_igv_site_options', '_igv_splash_video_mp4');
-$video_reversed = IGV_get_option('_igv_site_options', '_igv_splash_video_reversed_mp4');
+$front_page_options = get_site_option('_igv_front_page_options');
 
-if (!empty($video) && !empty($video_reversed)) {
+if (!empty($front_page_options['splash_video_mp4']) && !empty($front_page_options['splash_video_reversed_mp4'])) {
 ?>
 
 <div id="splash-video-container" class="padding-bottom-basic">
   <div class="grid-row">
-    <div class="grid-item item-s-12">
+    <div class="grid-item item-s-12 no-gutter">
       <video id="splash-video-1" class="splash-video" preload width="100%" muted>
-        <source src="<?php echo $video;?>" type="video/mp4">
+        <source src="<?php echo $front_page_options['splash_video_mp4'];?>" type="video/mp4">
        </video>
       <video id="splash-video-2" class="splash-video u-hidden" preload width="100%" muted>
-        <source src="<?php echo $video_reversed;?>" type="video/mp4">
+        <source src="<?php echo $front_page_options['splash_video_reversed_mp4'];?>" type="video/mp4">
        </video>
     </div>
   </div>

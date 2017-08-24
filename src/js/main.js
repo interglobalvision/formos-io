@@ -2,16 +2,22 @@
 /* global $, jQuery, document, Site, Modernizr */
 
 Site = {
+  animationSpeed: 666,
   mobileThreshold: 601,
   init: function() {
     var _this = this;
+
+    _this.fixWidows();
+
+     _this.Menu.init();
 
     $(window).resize(function(){
       _this.onResize();
     });
 
     $(document).ready(function () {
-      _this.Video.init();
+      _this.SplashVideo.init();
+      _this.WhatIsVideo.init();
     });
 
   },
@@ -31,7 +37,7 @@ Site = {
   },
 };
 
-Site.Video = {
+Site.SplashVideo = {
   playing: false,
   toPlay: 0,
   init:  function() {
@@ -132,6 +138,49 @@ Site.Video = {
       });
     }
   },
+};
+
+Site.WhatIsVideo = {
+  $player: $('#what-is-video-player'),
+  $video: $('#what-is-video'),
+
+  init: function() {
+    var _this = this;
+
+    _this.$player.on('click', _this.handleClick.bind(_this));
+  },
+
+  handleClick: function() {
+    var _this = this;
+
+    if (_this.$player.hasClass('playing')) {
+      _this.$video[0].pause();
+      _this.$player.removeClass('playing');
+    } else {
+      _this.$video[0].play();
+      _this.$player.addClass('playing');
+
+    }
+  },
+};
+
+Site.Menu = {
+  init: function() {
+    var _this = this;
+
+    $('.js-scrollto').on('click', function() {
+      var section = $(this).data('scroll');
+
+      _this.scrollTo(section);
+    });
+  },
+
+  scrollTo: function(section) {
+    var _this = this;
+    var $target = $('#section-' + section);
+
+    $('html, body').stop().animate({ scrollTop: $target.offset().top }, Site.animationSpeed);
+  }
 };
 
 Site.init();

@@ -7,3 +7,54 @@
 .logo
   path
     fill: $color-black
+
+// HEADER
+
+#header
+  display: none
+  background-color: $color-blue
+  font-size: 14px
+
+#header-logo-holder
+  svg
+    height: 1.7rem
+
+// WHAT IS SECTION
+
+#what-is-video-player
+  position: relative
+  &:hover
+    #what-is-video-play-button-svg
+      circle
+        fill: $color-black
+        transition: all $transition-speed-fast
+    #what-is-video
+      box-shadow: -6px 14px 30px 7px $color-gray
+  &.playing
+    #what-is-video-play-trigger
+      display: none
+
+#what-is-video-play-trigger
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+#what-is-video-play-button-svg
+  height: 30%
+  width: 30%
+  circle
+    fill: $color-gray
+
+#what-is-video
+  box-shadow: -2px 17px 65px 5px $color-gray
+  border-radius: 8px
+  border: 1px solid $color-gray
+  transition: all $transition-speed
+
+// SPLASH
+
+#splash-logo-holder
+  svg
+    height: 4rem

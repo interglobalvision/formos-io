@@ -1,7 +1,7 @@
-<div class="container padding-bottom-basic">
+<div id="section-how" class="container padding-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-small">
-      <h2 class="font-size-basic">How formOS works</h2>
+      <h2 class="font-size-mid js-fix-widows">How formOS works</h2>
     </div>
   </div>
   <div class="grid-row align-items-end justify-between text-align-center">
@@ -39,7 +39,7 @@
 <div class="container padding-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-small">
-      <h3 class="font-size-basic">A formOS unit has 6 connecting sides</h3>
+      <h3 class="font-size-basic js-fix-widows">A formOS unit has 6 connecting sides</h3>
     </div>
   </div>
   <div class="grid-row">
@@ -52,8 +52,8 @@
 <div class="container padding-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-small font-size-basic">
-      <h3>formOS can be connected in an infinite amount of ways</h3>
-      <span>(here are a few basic ones)</span>
+      <h3 class="font-size-basic js-fix-widows">formOS can be connected in an infinite amount of ways</h3>
+      <h3 class="font-size-basic js-fix-widows">(here are a few basic ones)</h3>
     </div>
   </div>
   <div class="grid-row">
