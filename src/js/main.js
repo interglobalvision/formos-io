@@ -185,17 +185,18 @@ Site.Menu = {
 };
 
 Site.Countdown = {
-  $countdown: $('#countdown'),
-  $countdownDays: $('#countdown-days'),
-  $countdownHours: $('#countdown-hours'),
-  $countdownMinutes: $('#countdown-minutes'),
-  $countdownSeconds: $('#countdown-seconds'),
   dayInSeconds: 60 * 60 * 24,
   hoursInSeconds: 60 * 60,
   interval: undefined,
 
   init: function() {
     var _this = this;
+
+    _this.$countdown = $('#countdown');
+    _this.$countdownDays = $('#countdown-days');
+    _this.$countdownHours = $('#countdown-hours');
+    _this.$countdownMinutes = $('#countdown-minutes');
+    _this.$countdownSeconds = $('#countdown-seconds');
 
     // get end time from markup
     _this.end = _this.$countdown.data('end');
