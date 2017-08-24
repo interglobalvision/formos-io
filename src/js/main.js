@@ -166,8 +166,6 @@ Site.WhatIsVideo = {
 };
 
 Site.Menu = {
-  pointerPosition: undefined,
-
   init: function() {
     var _this = this;
 
