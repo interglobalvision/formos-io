@@ -49,6 +49,16 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'See formOS in action video', 'cmb2' ),
+    'desc'    => esc_html__( 'for what is section', 'cmb2' ),
+    'id'      => 'what_is_video',
+    'type'    => 'file',
+    'query_args' => array(
+      'type' => 'video/mp4',
+    ),
+  ) );
+
   // Site options for general data
 
   $site_options = new_cmb2_box( array(

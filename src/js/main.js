@@ -16,7 +16,8 @@ Site = {
     });
 
     $(document).ready(function () {
-      _this.Video.init();
+      _this.SplashVideo.init();
+      _this.WhatIsVideo.init();
     });
 
   },
@@ -36,7 +37,7 @@ Site = {
   },
 };
 
-Site.Video = {
+Site.SplashVideo = {
   playing: false,
   toPlay: 0,
   init:  function() {
@@ -135,6 +136,30 @@ Site.Video = {
         _this.handleScroll($(window).scrollTop());
 
       });
+    }
+  },
+};
+
+Site.WhatIsVideo = {
+  $player: $('#what-is-video-player'),
+  $video: $('#what-is-video'),
+
+  init: function() {
+    var _this = this;
+
+    _this.$player.on('click', _this.handleClick.bind(_this));
+  },
+
+  handleClick: function() {
+    var _this = this;
+
+    if (_this.$player.hasClass('playing')) {
+      _this.$video[0].pause();
+      _this.$player.removeClass('playing');
+    } else {
+      _this.$video[0].play();
+      _this.$player.addClass('playing');
+
     }
   },
 };
