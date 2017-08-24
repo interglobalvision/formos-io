@@ -59,6 +59,37 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  // Modules
+  $modules_group = $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Modules', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'modules',
+    'type'    => 'group',
+    'options' => array(
+      'group_title'   => __( 'Module {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+      'add_button'    => __( 'Add Another Module', 'cmb2' ),
+      'remove_button' => __( 'Remove Module', 'cmb2' ),
+      'sortable'      => true, // beta
+    ),
+  ) );
+
+  $front_page_options->add_group_field($modules_group, array(
+    'name'    => esc_html__( 'Name', 'cmb2' ),
+    'id'      => 'module_name',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_group_field($modules_group, array(
+    'name'    => esc_html__( 'Video', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'module_video_mp4',
+    'type'    => 'file',
+    'query_args' => array(
+      'type' => 'video/mp4',
+    ),
+  ) );
+
+
   // Site options for general data
 
   $site_options = new_cmb2_box( array(
