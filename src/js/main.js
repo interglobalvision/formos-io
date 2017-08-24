@@ -228,21 +228,21 @@ Site.Countdown = {
     var daysRemaining = _this.secondsRemaining / _this.dayInSeconds;
     var daysRemainingRemainder = _this.secondsRemaining % _this.dayInSeconds;
 
-    _this.$countdownDays.text(Math.floor(daysRemaining));
+    _this.$countdownDays.text(_this.displayValueFromFloat(daysRemaining));
 
     var hoursRemaining = daysRemainingRemainder / _this.hoursInSeconds;
 
-    _this.$countdownHours.text(Math.floor(hoursRemaining));
+    _this.$countdownHours.text(_this.displayValueFromFloat(hoursRemaining));
 
     var hoursRemainingRemainder = daysRemainingRemainder % _this.hoursInSeconds;
 
     var minutesRemaining = hoursRemainingRemainder / 60;
 
-    _this.$countdownMinutes.text(Math.floor(minutesRemaining));
+    _this.$countdownMinutes.text(_this.displayValueFromFloat(minutesRemaining));
 
     var minutesRemainingRemainder = hoursRemainingRemainder % 60;
 
-    _this.$countdownSeconds.text(Math.floor(minutesRemainingRemainder));
+    _this.$countdownSeconds.text(_this.displayValueFromFloat(minutesRemainingRemainder));
   },
 
   checkFinished: function() {
@@ -255,7 +255,21 @@ Site.Countdown = {
       // perhaps we have a better solution but for now just remove the countdown
       $('#section-countdown').remove();
     }
-  }
+  },
+
+  displayValueFromFloat: function(input) {
+    var _this = this;
+
+    return _this.padNumber(Math.floor(input));
+  },
+
+  // https://stackoverflow.com/questions/10073699/pad-a-number-with-leading-zeros-in-javascript#10073788
+  padNumber: function(n, width, z) {
+    z = z || '0';
+    width = width || 2;
+    n = n + '';
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+  },
 };
 
 Site.init();
