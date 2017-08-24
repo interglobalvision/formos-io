@@ -31,13 +31,21 @@ return $post_options;
 add_action( 'cmb2_init', 'igv_cmb_metaboxes' );
 function igv_cmb_metaboxes() {
 
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_igv_';
+  // Start with an underscore to hide fields from custom fields list
+  $prefix = '_igv_';
 
-	/**
-	 * Metaboxes declarations here
-   * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
-	 */
+  $cmb_demo = new_cmb2_box( array(
+    'id'            => $prefix . 'demos',
+    'title'         => esc_html__( 'Demo Metabox', 'cmb2' ),
+    'object_types'  => array( 'demo' ), // Post type
+  ) );
+
+  $cmb_demo->add_field( array(
+    'name'       => esc_html__( 'Demo Type', 'cmb2' ),
+    'desc'       => esc_html__( 'type description (optional)', 'cmb2' ),
+    'id'         => $prefix . 'type',
+    'type'       => 'text',
+  ) );
 
 }
 ?>
