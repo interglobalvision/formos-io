@@ -264,12 +264,11 @@ Site.Countdown = {
     return _this.padNumber(Math.floor(input));
   },
 
-  // https://stackoverflow.com/questions/10073699/pad-a-number-with-leading-zeros-in-javascript#10073788
-  padNumber: function(n, width, z) {
-    z = z || '0';
-    width = width || 2;
+  padNumber: function(n) {
+    // adapted from https://stackoverflow.com/questions/10073699/pad-a-number-with-leading-zeros-in-javascript#10073788
     n = n + '';
-    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+
+    return n.length >= 2 ? n : new Array(2 - n.length + 1).join('0') + n;
   },
 };
 
