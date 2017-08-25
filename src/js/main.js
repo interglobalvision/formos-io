@@ -19,6 +19,7 @@ Site = {
     $(document).ready(function () {
       _this.SplashVideo.init();
       _this.WhatIsVideo.init();
+      _this.Modules.init();
     });
 
   },
@@ -270,6 +271,32 @@ Site.Countdown = {
 
     return n.length >= 2 ? n : new Array(2 - n.length + 1).join('0') + n;
   },
+};
+
+Site.Modules = {
+  init: function() {
+    var _this = this;
+
+    _this.$videos = $('.module-video');
+
+    // TODO: Launch enter animation
+
+    _this.bind();
+  },
+
+  bind: function() {
+    var _this = this;
+
+    // Bind mouse over
+    _this.$videos.on('mouseover.videoModule', function(event) {
+      this.play();
+    });
+
+    // Bind mouse leave
+    _this.$videos.on('mouseleave', function(event) {
+      this.pause();
+    });
+  }
 };
 
 Site.init();
