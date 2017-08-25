@@ -2,17 +2,17 @@
 
 /* Get post objects for select field options */
 function get_post_objects( $query_args ) {
-$args = wp_parse_args( $query_args, array(
+  $args = wp_parse_args( $query_args, array(
     'post_type' => 'post',
-) );
-$posts = get_posts( $args );
-$post_options = array();
-if ( $posts ) {
+  ) );
+  $posts = get_posts( $args );
+  $post_options = array();
+  if ( $posts ) {
     foreach ( $posts as $post ) {
-        $post_options [ $post->ID ] = $post->post_title;
+      $post_options [ $post->ID ] = $post->post_title;
     }
-}
-return $post_options;
+  }
+  return $post_options;
 }
 
 
@@ -33,6 +33,11 @@ function igv_cmb_metaboxes() {
 
   // Start with an underscore to hide fields from custom fields list
   $prefix = '_igv_';
+
+  /**
+   * Metaboxes declarations here
+   * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
+   */
 
   $cmb_demo = new_cmb2_box( array(
     'id'            => $prefix . 'demos',

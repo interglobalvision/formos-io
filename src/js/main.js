@@ -18,6 +18,7 @@ Site = {
     $(document).ready(function () {
       _this.SplashVideo.init();
       _this.WhatIsVideo.init();
+      _this.Modules.init();
     });
 
   },
@@ -180,6 +181,32 @@ Site.Menu = {
     var $target = $('#section-' + section);
 
     $('html, body').stop().animate({ scrollTop: $target.offset().top }, Site.animationSpeed);
+  }
+};
+
+Site.Modules = {
+  init: function() {
+    var _this = this;
+
+    _this.$videos = $('.module-video');
+
+    // TODO: Launch enter animation
+
+    _this.bind();
+  },
+
+  bind: function() {
+    var _this = this;
+
+    // Bind mouse over
+    _this.$videos.on('mouseover.videoModule', function(event) {
+      this.play();
+    });
+
+    // Bind mouse leave
+    _this.$videos.on('mouseleave', function(event) {
+      this.pause();
+    });
   }
 };
 
