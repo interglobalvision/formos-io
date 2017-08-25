@@ -25,9 +25,13 @@
       <div class="font-size-small">
         <?php
           the_content();
+        ?>
 
+        <?php
           if ($type) {
-            echo $type;
+        ?>
+          <p>Type: <?php echo $type; ?></p>
+        <?php
           }
         ?>
       </div>
