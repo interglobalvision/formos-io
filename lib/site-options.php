@@ -59,6 +59,22 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  // Countdown
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Countdown', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'countdown_title',
+    'type'    => 'title',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'End time', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'countdown_end',
+    'type'    => 'text_datetime_timestamp_timezone',
+  ) );
+
+  // Signup
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'Signup', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
@@ -74,8 +90,15 @@ function igv_register_theme_options_metabox() {
   ) );
 
   // Modules
-  $modules_group = $front_page_options->add_field( array(
+  $front_page_options->add_field( array(
     'name'    => esc_html__( 'Modules', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'modules_title',
+    'type'    => 'title',
+  ) );
+
+  $modules_group = $front_page_options->add_field( array(
+    'name'    => esc_html__( '', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
     'id'      => 'modules',
     'type'    => 'group',
@@ -114,7 +137,6 @@ function igv_register_theme_options_metabox() {
       'type' => 'video/mp4',
     ),
   ) );
-
 
   // Site options for general data
 

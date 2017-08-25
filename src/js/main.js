@@ -10,6 +10,7 @@ Site = {
     _this.fixWidows();
 
      _this.Menu.init();
+     _this.Countdown.init();
 
     $(window).resize(function(){
       _this.onResize();
@@ -182,6 +183,94 @@ Site.Menu = {
 
     $('html, body').stop().animate({ scrollTop: $target.offset().top }, Site.animationSpeed);
   }
+};
+
+Site.Countdown = {
+  dayInSeconds: 60 * 60 * 24,
+  hoursInSeconds: 60 * 60,
+  interval: undefined,
+
+  init: function() {
+    var _this = this;
+
+    _this.$countdown = $('#countdown');
+    _this.$countdownDays = $('#countdown-days');
+    _this.$countdownHours = $('#countdown-hours');
+    _this.$countdownMinutes = $('#countdown-minutes');
+    _this.$countdownSeconds = $('#countdown-seconds');
+
+    // get end time from markup
+    _this.end = _this.$countdown.data('end');
+
+    var now = moment().utc();
+    var nowUnixTimestampSeconds = now.format('X');
+
+    // calculate seconds between endtime and now
+    _this.secondsRemaining = _this.end - nowUnixTimestampSeconds;
+
+    // check if already finished, then display countdown values
+    _this.checkFinished();
+    _this.displayRemainingTime();
+
+    // setup interval to count down each second and update the display values
+    _this.interval = window.setInterval(function() {
+      _this.secondsRemaining--;
+
+      _this.checkFinished();
+      _this.displayRemainingTime();
+    }, 1000);
+
+  },
+
+  displayRemainingTime: function() {
+    var _this = this;
+
+    // each of these calculates the remaining values from the seconds remaining, then calculates the remainder of seconds to be used in the next step, then displays the values
+
+    var daysRemaining = _this.secondsRemaining / _this.dayInSeconds;
+    var daysRemainingRemainder = _this.secondsRemaining % _this.dayInSeconds;
+
+    _this.$countdownDays.text(_this.displayValueFromFloat(daysRemaining));
+
+    var hoursRemaining = daysRemainingRemainder / _this.hoursInSeconds;
+
+    _this.$countdownHours.text(_this.displayValueFromFloat(hoursRemaining));
+
+    var hoursRemainingRemainder = daysRemainingRemainder % _this.hoursInSeconds;
+
+    var minutesRemaining = hoursRemainingRemainder / 60;
+
+    _this.$countdownMinutes.text(_this.displayValueFromFloat(minutesRemaining));
+
+    var minutesRemainingRemainder = hoursRemainingRemainder % 60;
+
+    _this.$countdownSeconds.text(_this.displayValueFromFloat(minutesRemainingRemainder));
+  },
+
+  checkFinished: function() {
+    var _this = this;
+
+    // if there are no seconds remaining kill the countdown
+    if (_this.secondsRemaining <= 0) {
+      window.clearInterval(_this.interval);
+
+      // perhaps we have a better solution but for now just remove the countdown
+      $('#section-countdown').remove();
+    }
+  },
+
+  displayValueFromFloat: function(input) {
+    var _this = this;
+
+    return _this.padNumber(Math.floor(input));
+  },
+
+  padNumber: function(n) {
+    // adapted from https://stackoverflow.com/questions/10073699/pad-a-number-with-leading-zeros-in-javascript#10073788
+    n = n + '';
+
+    return n.length >= 2 ? n : new Array(2 - n.length + 1).join('0') + n;
+  },
 };
 
 Site.Modules = {
