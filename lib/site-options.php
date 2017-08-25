@@ -59,6 +59,20 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Signup', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'signup_title',
+    'type'    => 'title',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Mailchimp signup form url', 'cmb2' ),
+    'desc'    => esc_html__( 'just the action url from the Mailchimp form embed code. e.g. //xyz.us16.list-manage.com/subscribe/post?u=4aa0481cce7bb6784bccdb155&id=d87ge1ad9e', 'cmb2' ),
+    'id'      => 'signup_form_action',
+    'type'    => 'text',
+  ) );
+
   // Modules
   $modules_group = $front_page_options->add_field( array(
     'name'    => esc_html__( 'Modules', 'cmb2' ),
