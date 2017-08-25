@@ -77,6 +77,8 @@
     margin-right: $margin-small
     margin-bottom: $margin-small
     border-bottom: 1px solid $color-gray
+    &:focus
+      outline-color: $color-gray
   button
     padding: $margin-tiny $margin-basic
     background-color: $color-black
@@ -84,3 +86,5 @@
     transition: background-color $transition-speed-fast
     &:hover
       background-color: $color-gray
+    &:focus
+      outline: none
