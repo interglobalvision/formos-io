@@ -274,17 +274,18 @@ Site.Countdown = {
 };
 
 Site.Modules = {
+  played: false,
   init: function() {
     var _this = this;
 
     _this.$videos = $('.module-video');
 
-    // TODO: Launch enter animation
+    _this.threshold = _this.$videos.offset().top - ($(window).height() / 3) * 2;
 
-    _this.bind();
+    _this.bindScroll();
   },
 
-  bind: function() {
+  bindHover: function() {
     var _this = this;
 
     // Bind mouse over
@@ -296,7 +297,47 @@ Site.Modules = {
     _this.$videos.on('mouseleave', function(event) {
       this.pause();
     });
-  }
+  },
+
+  bindScroll: function() {
+    var _this = this;
+
+    // On window scroll
+    $(window).scroll(function(event) {
+      // Get the scroll position
+      var scrollTop = $(window).scrollTop();
+
+      // ...handle it
+      _this.handleScroll(scrollTop);
+    });
+  },
+
+  handleScroll: function(scrollTop) {
+    var _this = this;
+
+    if(!_this.played && scrollTop > _this.threshold) { // First video is to play and postition is below threshold
+      _this.playAnimation();
+    }
+  },
+
+  playAnimation: function() {
+    var _this = this;
+
+    _this.played = true;
+
+    _this.$videos.each( function(index) {
+      var video = this;
+      setTimeout( function(callback) {
+        video.play();
+        setTimeout( function() {
+          video.pause();
+        }, 1000 + (index * 50));
+      }, 100 * (index + 1));
+    });
+
+    _this.bindHover();
+  },
+
 };
 
 Site.init();
