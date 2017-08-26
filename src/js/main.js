@@ -56,8 +56,8 @@ Site.SplashVideo = {
     // TODO: Detect can autoplay
     _this.canAutoplay = true;
 
-    // TODO: Get threshold based on video position/margin/something
-    _this.threshold = 100;
+    // Get threshold based on video position/margin/something
+    _this.threshold = _this.$video1.offset().top;
 
   },
 
