@@ -23,10 +23,11 @@
 
 #what-is-video-player
   position: relative
+  transform: scale(.98)
   transition: all $transition-speed-fast
 
   &:hover
-    transform: scale(1.02)
+    transform: scale(1)
 
     #what-is-video-play-button-svg
       circle
@@ -36,7 +37,7 @@
       box-shadow: -6px 14px 65px 1px $color-gray
 
   &.playing
-    transform: scale(1.02)
+    transform: scale(1)
 
     #what-is-video-play-trigger
       display: none
@@ -49,7 +50,7 @@
   left: 0
   bottom: 0
   right: 0
-  z-index: 1
+  z-index: 10
 
 #what-is-video-play-button-svg
   height: 30%
