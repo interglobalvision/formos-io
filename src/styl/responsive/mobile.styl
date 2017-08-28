@@ -23,16 +23,26 @@
 
 #what-is-video-player
   position: relative
+  transform: scale(.98)
+  transition: all $transition-speed-fast
+
   &:hover
+    transform: scale(1)
+
     #what-is-video-play-button-svg
       circle
         fill: $color-black
         transition: all $transition-speed-fast
     #what-is-video
-      box-shadow: -6px 14px 30px 7px $color-gray
+      box-shadow: -6px 14px 65px 1px $color-gray
+
   &.playing
+    transform: scale(1)
+
     #what-is-video-play-trigger
       display: none
+    #what-is-video
+      box-shadow: -6px 14px 65px 1px $color-gray
 
 #what-is-video-play-trigger
   position: absolute
@@ -40,6 +50,7 @@
   left: 0
   bottom: 0
   right: 0
+  z-index: 10
 
 #what-is-video-play-button-svg
   height: 30%
@@ -48,7 +59,7 @@
     fill: $color-gray
 
 #what-is-video
-  box-shadow: -2px 17px 65px 5px $color-gray
+  box-shadow: -6px 14px 20px 1px $color-gray
   border-radius: 8px
   border: 1px solid $color-gray
   transition: all $transition-speed
@@ -65,7 +76,8 @@
     height: 3rem
 
 #section-footer-signup
-  input, button
+  input,
+  button
     border-width: 0
     border-radius: $margin-tiny
     letter-spacing: $font-tracking-basic
@@ -86,7 +98,7 @@
     &:hover
       background-color: $color-gray
     &:focus
-      outline: none
+      outline: 0
 
 // COUNTDOWN
 .font-size-countdown
