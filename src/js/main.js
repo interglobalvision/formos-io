@@ -275,7 +275,7 @@ Site.Countdown = {
 
 Site.Modules = {
   played: false,
-  offset: 0,
+  offset: 0, // ms offset between each video play init
   init: function() {
     var _this = this;
 
@@ -328,6 +328,7 @@ Site.Modules = {
 
     _this.$videos.each( function(index) {
       var video = this;
+
       setTimeout( function(callback) {
         video.play();
 
