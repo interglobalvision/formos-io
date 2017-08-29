@@ -286,16 +286,16 @@ Site.Modules = {
     _this.bindScroll();
   },
 
-  bindHover: function() {
+  bindHover: function(video) {
     var _this = this;
 
     // Bind mouse over
-    _this.$videos.on('mouseover.videoModule', function(event) {
+    $(video).on('mouseover.videoModule', function(event) {
       this.play();
     });
 
     // Bind mouse leave
-    _this.$videos.on('mouseleave', function(event) {
+    $(video).on('mouseleave', function(event) {
       this.pause();
     });
   },
@@ -333,11 +333,12 @@ Site.Modules = {
 
         $(video).on('ended', function() {
           this.loop = true;
+          _this.bindHover(this);
         });
       }, _this.offset * index);
     });
 
-    _this.bindHover();
+
   },
 
 };
