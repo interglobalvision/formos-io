@@ -47,21 +47,31 @@
   <div class="desktop-only">
     <div class="grid-row align-items-center justify-between margin-bottom-small text-align-center color-gray">
       <div class="grid-item how-item-large">
-        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
+        <div class="margin-bottom-tiny">
+          <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
+        </div>
       </div>
       <div class="grid-item how-item-small how-illustration-caption">
-        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_2.svg'); ?>
-        <div>Download into your own device</div>
+        <div class="margin-bottom-tiny">
+          <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_2.svg'); ?>
+        </div>
+        Download into your own device
       </div>
       <div class="grid-item how-item-large">
-        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_3.svg'); ?>
+        <div class="margin-bottom-tiny">
+          <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_3.svg'); ?>
+        </div>
       </div>
       <div class="grid-item how-item-small how-illustration-caption">
-        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_4.svg'); ?>
-        <div>Wireless communication</div>
+        <div class="margin-bottom-tiny">
+          <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_4.svg'); ?>
+        </div>
+        Wireless communication
       </div>
       <div class="grid-item how-item-large">
-        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_5.svg'); ?>
+        <div class="margin-bottom-tiny">
+          <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_5.svg'); ?>
+        </div>
       </div>
     </div>
     <div class="grid-row justify-between font-size-tiny text-align-center">
