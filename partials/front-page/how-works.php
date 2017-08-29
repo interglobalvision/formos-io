@@ -1,37 +1,40 @@
-<div id="section-how" class="container padding-bottom-basic">
+<div id="section-how" class="container margin-bottom-basic">
   <div class="grid-row">
-    <div class="grid-item item-s-12 text-align-center margin-bottom-small">
+    <div class="grid-item item-s-12 text-align-center margin-bottom-basic">
       <h2 class="font-size-mid js-fix-widows">How formOS works</h2>
     </div>
   </div>
-  <div class="grid-row align-items-end justify-between text-align-center">
-    <div class="grid-item">
+  <div class="grid-row align-items-center justify-between margin-bottom-small text-align-center color-gray">
+    <div class="grid-item how-item-large">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
     </div>
-    <div class="grid-item">
+    <div class="grid-item how-item-small how-illustration-caption">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_2.svg'); ?>
-      Download into your own device
+      <div>Download into your own device</div>
     </div>
-    <div class="grid-item item-s-3">
+    <div class="grid-item how-item-large">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_3.svg'); ?>
     </div>
-    <div class="grid-item">
+    <div class="grid-item how-item-small how-illustration-caption">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_4.svg'); ?>
-      Wireless communication
+      <div>Wireless communication</div>
     </div>
-    <div class="grid-item item-s-3">
+    <div class="grid-item how-item-large">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_5.svg'); ?>
     </div>
   </div>
-  <div class="grid-row justify-between text-align-center">
-    <div class="grid-item item-s-3">
-      formOS game/app library
+  <div class="grid-row justify-between font-size-tiny text-align-center">
+    <div class="grid-item item-m-3">
+      <h4 class="font-size-small margin-bottom-tiny">formOS game/app library</h4>
+      <p>App Store and Google Play – games published by formOS and third party publishers</p>
     </div>
-    <div class="grid-item item-s-3">
-      Your own device
+    <div class="grid-item item-m-3">
+      <h4 class="font-size-small margin-bottom-tiny">Your own device</h4>
+      <p>iOs, Apple TV*, Android and Google Play*</p>
     </div>
-    <div class="grid-item item-s-3">
-      formOS units
+    <div class="grid-item item-m-3">
+      <h4 class="font-size-small margin-bottom-tiny">formOS units</h4>
+      <p>4 units + charger in the Ignite Kit</p>
     </div>
   </div>
 </div>
@@ -49,9 +52,9 @@
   </div>
 </div>
 
-<div class="container padding-bottom-basic">
+<div class="container margin-bottom-large">
   <div class="grid-row">
-    <div class="grid-item item-s-12 text-align-center margin-bottom-small font-size-basic">
+    <div class="grid-item item-s-12 text-align-center margin-bottom-basic font-size-basic">
       <h3 class="font-size-basic js-fix-widows">formOS can be connected in an infinite amount of ways</h3>
       <h3 class="font-size-basic js-fix-widows">(here are a few basic ones)</h3>
     </div>
