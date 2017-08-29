@@ -334,7 +334,7 @@ Site.Modules = {
         $(video).on('ended', function() {
           this.loop = true;
         });
-      }, _this.offset);
+      }, _this.offset * index);
     });
 
     _this.bindHover();
