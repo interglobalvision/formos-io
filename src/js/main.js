@@ -275,7 +275,7 @@ Site.Countdown = {
 
 Site.Modules = {
   played: false,
-  animatioDelay: 0,
+  offset: 0,
   init: function() {
     var _this = this;
 
@@ -334,7 +334,7 @@ Site.Modules = {
         $(video).on('ended', function() {
           this.loop = true;
         });
-      }, _this.animatioDelay);
+      }, _this.offset);
     });
 
     _this.bindHover();
