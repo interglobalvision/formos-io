@@ -138,6 +138,13 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Six-sides image', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'six_sides_image',
+    'type'    => 'file',
+  ) );
+
   // Site options for general data
 
   $site_options = new_cmb2_box( array(

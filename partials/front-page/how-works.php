@@ -92,6 +92,12 @@
 
 </div>
 
+<?php
+$front_page_options = get_site_option('_igv_front_page_options');
+
+if (!empty($front_page_options['six_sides_image'])) {
+?>
+
 <div class="container padding-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-small">
@@ -100,10 +106,14 @@
   </div>
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center">
-      // 6 sides image
+      <?php echo wp_get_attachment_image($front_page_options['six_sides_image_id'], 'full'); ?>
     </div>
   </div>
 </div>
+
+<?php
+}
+?>
 
 <div class="container margin-bottom-large">
   <div class="grid-row">
