@@ -4,39 +4,82 @@
       <h2 class="font-size-mid js-fix-widows">How formOS works</h2>
     </div>
   </div>
-  <div class="grid-row align-items-center justify-between margin-bottom-small text-align-center color-gray">
-    <div class="grid-item how-item-large">
-      <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
+
+  <div class="mobile-only">
+    <div class="grid-row align-items-center margin-bottom-small">
+      <div class="grid-item item-s-6">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
+      </div>
+      <div class="grid-item item-s-6">
+        <h4 class="font-size-small">formOS game/app library</h4>
+      </div>
     </div>
-    <div class="grid-item how-item-small how-illustration-caption">
-      <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_2.svg'); ?>
-      <div>Download into your own device</div>
+    <div class="grid-row margin-bottom-small">
+      <div class="grid-item item-s-6 mobile-how-illustration text-align-center font-size-tiny color-gray">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_2.svg'); ?>
+        <div>Download into your own device</div>
+      </div>
     </div>
-    <div class="grid-item how-item-large">
-      <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_3.svg'); ?>
+    <div class="grid-row align-items-center margin-bottom-small">
+      <div class="grid-item item-s-6">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_3.svg'); ?>
+      </div>
+      <div class="grid-item item-s-6">
+        <h4 class="font-size-small">Your own device</h4>
+      </div>
     </div>
-    <div class="grid-item how-item-small how-illustration-caption">
-      <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_4.svg'); ?>
-      <div>Wireless communication</div>
+    <div class="grid-row margin-bottom-small">
+      <div class="grid-item item-s-6 mobile-how-illustration text-align-center font-size-tiny color-gray">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_4.svg'); ?>
+        <div>Wireless communication</div>
+      </div>
     </div>
-    <div class="grid-item how-item-large">
-      <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_5.svg'); ?>
+    <div class="grid-row align-items-center margin-bottom-small">
+      <div class="grid-item item-s-6">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_5.svg'); ?>
+      </div>
+      <div class="grid-item item-s-6">
+        <h4 class="font-size-small">formOS units</h4>
+      </div>
     </div>
   </div>
-  <div class="grid-row justify-between font-size-tiny text-align-center">
-    <div class="grid-item item-m-3">
-      <h4 class="font-size-small margin-bottom-tiny">formOS game/app library</h4>
-      <p>App Store and Google Play – games published by formOS and third party publishers</p>
+
+  <div class="desktop-only">
+    <div class="grid-row align-items-center justify-between margin-bottom-small text-align-center color-gray">
+      <div class="grid-item how-item-large">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
+      </div>
+      <div class="grid-item how-item-small how-illustration-caption">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_2.svg'); ?>
+        <div>Download into your own device</div>
+      </div>
+      <div class="grid-item how-item-large">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_3.svg'); ?>
+      </div>
+      <div class="grid-item how-item-small how-illustration-caption">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_4.svg'); ?>
+        <div>Wireless communication</div>
+      </div>
+      <div class="grid-item how-item-large">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_5.svg'); ?>
+      </div>
     </div>
-    <div class="grid-item item-m-3">
-      <h4 class="font-size-small margin-bottom-tiny">Your own device</h4>
-      <p>iOs, Apple TV*, Android and Google Play*</p>
-    </div>
-    <div class="grid-item item-m-3">
-      <h4 class="font-size-small margin-bottom-tiny">formOS units</h4>
-      <p>4 units + charger in the Ignite Kit</p>
+    <div class="grid-row justify-between font-size-tiny text-align-center">
+      <div class="grid-item item-m-3">
+        <h4 class="font-size-small margin-bottom-tiny">formOS game/app library</h4>
+        <p>App Store and Google Play – games published by formOS and third party publishers</p>
+      </div>
+      <div class="grid-item item-m-3">
+        <h4 class="font-size-small margin-bottom-tiny">Your own device</h4>
+        <p>iOs, Apple TV*, Android and Google Play*</p>
+      </div>
+      <div class="grid-item item-m-3">
+        <h4 class="font-size-small margin-bottom-tiny">formOS units</h4>
+        <p>4 units + charger in the Ignite Kit</p>
+      </div>
     </div>
   </div>
+
 </div>
 
 <div class="container padding-bottom-basic">
@@ -60,19 +103,19 @@
     </div>
   </div>
   <div class="grid-row">
-    <div class="grid-item item-s-12 item-m-3 text-align-center">
+    <div class="grid-item item-s-6 item-m-3 text-align-center">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_sphere.svg'); ?>
       <h4>Sphere</h4>
     </div>
-    <div class="grid-item item-s-12 item-m-3 text-align-center">
+    <div class="grid-item item-s-6 item-m-3 text-align-center">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_line.svg'); ?>
       <h4>Line</h4>
     </div>
-    <div class="grid-item item-s-12 item-m-3 text-align-center">
+    <div class="grid-item item-s-6 item-m-3 text-align-center">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_arc.svg'); ?>
       <h4>Arc</h4>
     </div>
-    <div class="grid-item item-s-12 item-m-3 text-align-center">
+    <div class="grid-item item-s-6 item-m-3 text-align-center">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_more.svg'); ?>
       <h4>And many more...</h4>
     </div>
