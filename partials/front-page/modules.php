@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="grid-row margin-bottom-small">
-    <div class="grid-item item-s-3">
+    <div class="grid-item item-s-3 text-align-center">
       <h2 class="color-gray font-uppercase font-size-tiny">Central module</h2>
     </div>
     <div class="grid-item item-s-9 text-align-center">
@@ -44,16 +44,27 @@
       if (!empty($name) && !empty($mp4)) {
 ?>
     <div class="grid-item item-m-6 item-l-3">
-      <video class="module-video" preload loop width="100%" muted>
+      <video class="module-video" preload width="100%" muted>
         <source src="<?php echo $mp4;?>" type="video/mp4">
       </video>
       <h3 class="font-size-basic margin-bottom-small"><?php echo $name; ?></h3>
+<?php
+        if (!empty($desc)) {
+?>
       <div class="font-size-tiny margin-bottom-small">
         <?php echo apply_filters('the_content', $desc); ?>
       </div>
+<?php
+        }
+
+        if (!empty($spec)) {
+?>
       <div class="font-size-tiny color-gray margin-bottom-small">
         <?php echo apply_filters('the_content', $spec); ?>
       </div>
+<?php
+        }
+?>
     </div>
 
 <?php
