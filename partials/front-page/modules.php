@@ -48,12 +48,23 @@
         <source src="<?php echo $mp4;?>" type="video/mp4">
       </video>
       <h3 class="font-size-basic margin-bottom-small"><?php echo $name; ?></h3>
+<?php
+        if (!empty($desc)) {
+?>
       <div class="font-size-tiny margin-bottom-small">
         <?php echo apply_filters('the_content', $desc); ?>
       </div>
+<?php
+        }
+
+        if (!empty($spec)) {
+?>
       <div class="font-size-tiny color-gray margin-bottom-small">
         <?php echo apply_filters('the_content', $spec); ?>
       </div>
+<?php
+        }
+?>
     </div>
 
 <?php
