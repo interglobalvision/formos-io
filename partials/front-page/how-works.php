@@ -11,7 +11,7 @@
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
       </div>
       <div class="grid-item item-s-6">
-        <h4 class="font-size-small">formOS game/app library</h4>
+        <h4 class="font-size-basic">formOS game/app library</h4>
       </div>
     </div>
     <div class="grid-row margin-bottom-small">
@@ -25,7 +25,7 @@
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_3.svg'); ?>
       </div>
       <div class="grid-item item-s-6">
-        <h4 class="font-size-small">Your own device</h4>
+        <h4 class="font-size-basic">Your own device</h4>
       </div>
     </div>
     <div class="grid-row margin-bottom-small">
@@ -39,7 +39,7 @@
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_5.svg'); ?>
       </div>
       <div class="grid-item item-s-6">
-        <h4 class="font-size-small">formOS units</h4>
+        <h4 class="font-size-basic">formOS units</h4>
       </div>
     </div>
   </div>
@@ -74,17 +74,25 @@
         </div>
       </div>
     </div>
+    <div class="grid-row justify-between font-size-small text-align-center">
+      <div class="grid-item how-item-large">
+        <h4 class="margin-bottom-tiny">formOS game/app library</h4>
+      </div>
+      <div class="grid-item how-item-large">
+        <h4 class="margin-bottom-tiny">Your own device</h4>
+      </div>
+      <div class="grid-item how-item-large">
+        <h4 class="margin-bottom-tiny">formOS units</h4>
+      </div>
+    </div>
     <div class="grid-row justify-between font-size-tiny text-align-center">
-      <div class="grid-item item-m-3">
-        <h4 class="font-size-small margin-bottom-tiny">formOS game/app library</h4>
+      <div class="grid-item how-item-large">
         <p>App Store and Google Play – games published by formOS and third party publishers</p>
       </div>
-      <div class="grid-item item-m-3">
-        <h4 class="font-size-small margin-bottom-tiny">Your own device</h4>
+      <div class="grid-item how-item-large">
         <p>iOs, Apple TV*, Android and Google Play*</p>
       </div>
-      <div class="grid-item item-m-3">
-        <h4 class="font-size-small margin-bottom-tiny">formOS units</h4>
+      <div class="grid-item how-item-large">
         <p>4 units + charger in the Ignite Kit</p>
       </div>
     </div>
@@ -105,7 +113,7 @@ if (!empty($front_page_options['six_sides_image'])) {
     </div>
   </div>
   <div class="grid-row">
-    <div class="grid-item item-s-12 text-align-center">
+    <div class="grid-item item-s-8 offset-s-2 item-m-6 offset-l-3 item-l-4 offset-l-4 text-align-center">
       <?php echo wp_get_attachment_image($front_page_options['six_sides_image_id'], 'full'); ?>
     </div>
   </div>
@@ -122,7 +130,7 @@ if (!empty($front_page_options['six_sides_image'])) {
       <h3 class="font-size-basic js-fix-widows">(here are a few basic ones)</h3>
     </div>
   </div>
-  <div class="grid-row">
+  <div id="connection-ways-icon-row" class="grid-row">
     <div class="grid-item item-s-6 item-m-3 text-align-center">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_sphere.svg'); ?>
       <h4>Sphere</h4>
