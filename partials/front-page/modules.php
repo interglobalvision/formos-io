@@ -44,7 +44,7 @@
       if (!empty($name) && !empty($mp4)) {
 ?>
     <div class="grid-item item-m-6 item-l-3">
-      <video class="module-video" preload loop width="100%" muted>
+      <video class="module-video" preload width="100%" muted>
         <source src="<?php echo $mp4;?>" type="video/mp4">
       </video>
       <h3 class="font-size-basic margin-bottom-small"><?php echo $name; ?></h3>
