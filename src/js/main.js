@@ -27,6 +27,7 @@ Site = {
   onResize: function() {
     var _this = this;
 
+    _this.SplashVideo.onResize();
   },
 
   fixWidows: function() {
@@ -56,9 +57,15 @@ Site.SplashVideo = {
     // TODO: Detect can autoplay
     _this.canAutoplay = true;
 
-    // TODO: Get threshold based on video position/margin/something
-    _this.threshold = 100;
+    // Set threshold
+    _this.threshold = _this.$video1.offset().top - ($(window).height() / 3) * 2;
 
+  },
+
+  onResize: function() {
+    var _this = this;
+
+    _this.threshold = _this.$video1.offset().top - ($(window).height() / 3) * 2;
   },
 
   handleCanPlayThrough: function() {
