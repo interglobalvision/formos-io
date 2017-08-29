@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="grid-row margin-bottom-small">
-    <div class="grid-item item-s-3">
+    <div class="grid-item item-s-3 text-align-center">
       <h2 class="color-gray font-uppercase font-size-tiny">Central module</h2>
     </div>
     <div class="grid-item item-s-9 text-align-center">
