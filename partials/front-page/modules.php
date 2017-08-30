@@ -25,12 +25,6 @@
 <?php
     foreach($modules as $index => $module) {
 
-      // Get data
-      $name = $module['module_name'];
-      $mp4 = $module['module_video_mp4'];
-      $desc = $module['module_desc'];
-      $spec = $module['module_specs'];
-
       // Open grid row
       if ($index === 0 || $index % 4 === 0) {
 ?>
@@ -39,26 +33,26 @@
       }
 
       // Close grid row
-      if (!empty($name) && !empty($mp4)) {
+      if (!empty($module['module_name']) && !empty($module['module_video_mp4'])) {
 ?>
     <div class="grid-item item-m-6 item-l-3">
       <video class="module-video" preload width="100%" muted>
-        <source src="<?php echo $mp4;?>" type="video/mp4">
+        <source src="<?php echo $module['module_video_mp4'];?>" type="video/mp4">
       </video>
-      <h3 class="font-size-basic margin-bottom-small"><?php echo $name; ?></h3>
+      <h3 class="font-size-basic margin-bottom-small"><?php echo $module['module_name']; ?></h3>
 <?php
-        if (!empty($desc)) {
+        if (!empty($module['module_desc'])) {
 ?>
       <div class="font-size-tiny margin-bottom-small">
-        <?php echo apply_filters('the_content', $desc); ?>
+        <?php echo apply_filters('the_content', $module['module_desc']); ?>
       </div>
 <?php
         }
 
-        if (!empty($spec)) {
+        if (!empty($module['module_specs'])) {
 ?>
       <div class="font-size-tiny color-gray margin-bottom-small">
-        <?php echo apply_filters('the_content', $spec); ?>
+        <?php echo apply_filters('the_content', $module['module_specs']); ?>
       </div>
 <?php
         }
