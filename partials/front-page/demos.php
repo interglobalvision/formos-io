@@ -6,7 +6,7 @@
 
   if ($demos->have_posts()) {
 ?>
-<div class="container margin-bottom-large">
+<div id="section-demos" class="container margin-bottom-large">
   <div class="grid-row margin-bottom-basic">
     <div class="grid-item item-s-12 text-align-center">
       <h2 class="font-size-basic margin-bottom-small">The formOS demos and beyond...</h2>
