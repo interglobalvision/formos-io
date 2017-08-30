@@ -7,10 +7,10 @@
     $modules_count = count($modules);
 ?>
 
-<div id="section-modules" class="container padding-bottom-basic">
+<div id="section-modules" class="container margin-bottom-large">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center">
-      <h2 class="font-size-mid js-fix-widows">The formOS Ignite Kit: 4 modules to start with</h2>
+      <h2 class="font-size-mid margin-bottom-basic js-fix-widows">The formOS Ignite Kit: 4 modules to start with</h2>
     </div>
   </div>
   <div class="grid-row margin-bottom-small">
@@ -30,8 +30,6 @@
       $mp4 = $module['module_video_mp4'];
       $desc = $module['module_desc'];
       $spec = $module['module_specs'];
-
-      //pr($module);
 
       // Open grid row
       if ($index === 0 || $index % 4 === 0) {
@@ -71,7 +69,7 @@
       }
 
       // Close grid row
-      if ($index === count($modules) || $index + 1 % 4 === 0) {
+      if ($index === (count($modules) - 1) || $index + 1 % 4 === 0) {
 ?>
   </div>
 <?php
@@ -80,9 +78,7 @@
 <?php
     }
 ?>
-
 </div>
-
 <?php
   }
 ?>
