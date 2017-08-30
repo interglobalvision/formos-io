@@ -31,8 +31,6 @@
       $desc = $module['module_desc'];
       $spec = $module['module_specs'];
 
-      //pr($module);
-
       // Open grid row
       if ($index === 0 || $index % 4 === 0) {
 ?>
