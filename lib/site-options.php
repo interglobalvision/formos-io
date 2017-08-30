@@ -129,20 +129,20 @@ function igv_register_theme_options_metabox() {
   ) );
 
   $front_page_options->add_group_field($modules_group, array(
-    'name'    => esc_html__( 'Video', 'cmb2' ),
+    'name'    => esc_html__( 'Image', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
-    'id'      => 'module_video_mp4',
+    'id'      => 'module_image',
+    'type'    => 'file',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Six-sides video', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'six_sides_video',
     'type'    => 'file',
     'query_args' => array(
       'type' => 'video/mp4',
     ),
-  ) );
-
-  $front_page_options->add_field( array(
-    'name'    => esc_html__( 'Six-sides image', 'cmb2' ),
-    'desc'    => esc_html__( '', 'cmb2' ),
-    'id'      => 'six_sides_image',
-    'type'    => 'file',
   ) );
 
   // Site options for general data

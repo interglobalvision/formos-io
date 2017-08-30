@@ -103,7 +103,7 @@
 <?php
 $front_page_options = get_site_option('_igv_front_page_options');
 
-if (!empty($front_page_options['six_sides_image'])) {
+if (!empty($front_page_options['six_sides_video'])) {
 ?>
 
 <div class="container padding-bottom-basic">
@@ -114,7 +114,9 @@ if (!empty($front_page_options['six_sides_image'])) {
   </div>
   <div class="grid-row">
     <div class="grid-item item-s-8 offset-s-2 item-m-6 offset-l-3 item-l-4 offset-l-4 text-align-center">
-      <?php echo wp_get_attachment_image($front_page_options['six_sides_image_id'], 'full'); ?>
+      <video class="module-video" preload width="100%" muted>
+        <source src="<?php echo $front_page_options['six_sides_video'];?>" type="video/mp4">
+      </video>
     </div>
   </div>
 </div>
