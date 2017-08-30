@@ -52,7 +52,12 @@ Site.SplashVideo = {
     // First video
     _this.$video1 = $('#splash-video-1');
 
-    _this.$video1.on('canplaythrough.video1', _this.handleCanPlayThrough.bind(_this));
+
+    if (_this.$video1[0].readyState > 3) {
+      _this.bindScroll();
+    } else {
+      _this.$video1.on('canplaythrough.video1', _this.handleCanPlayThrough.bind(_this));
+    }
 
     // TODO: Detect can autoplay
     _this.canAutoplay = true;
