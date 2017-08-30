@@ -46,24 +46,29 @@ Site.SplashVideo = {
   init:  function() {
     var _this = this;
 
-    // Selector for both videos
-    _this.$videos = $('.splash-video');
+    // Init if in markup
+    if ($('#splash-video-container').length) {
 
-    // First video
-    _this.$video1 = $('#splash-video-1');
+      // Selector for both videos
+      _this.$videos = $('.splash-video');
+
+      // First video
+      _this.$video1 = $('#splash-video-1');
 
 
-    if (_this.$video1[0].readyState > 3) {
-      _this.bindScroll();
-    } else {
-      _this.$video1.on('canplaythrough.video1', _this.handleCanPlayThrough.bind(_this));
+      if (_this.$video1[0].readyState > 3) {
+        _this.bindScroll();
+      } else {
+        _this.$video1.on('canplaythrough.video1', _this.handleCanPlayThrough.bind(_this));
+      }
+
+      // TODO: Detect can autoplay
+      _this.canAutoplay = true;
+
+      // Set threshold
+      _this.threshold = _this.$video1.offset().top - ($(window).height() / 3) * 2;
+
     }
-
-    // TODO: Detect can autoplay
-    _this.canAutoplay = true;
-
-    // Set threshold
-    _this.threshold = _this.$video1.offset().top - ($(window).height() / 3) * 2;
 
   },
 
