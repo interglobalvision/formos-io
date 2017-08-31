@@ -71,11 +71,11 @@
 
     <section id="mobile-menu" class="padding-top-small">
       <ul class="container grid-column justify-around font-uppercase">
-        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="what-is">What is formOS?</li>
-        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="how">How does it work?</li>
-        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="modules">The ignite kit</li>
-        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="demos">Our demos</li>
-        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="footer-signup">Sign up</li>
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto mobile-scrollto" data-scroll="what-is">What is formOS?</li>
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto mobile-scrollto" data-scroll="how">How does it work?</li>
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto mobile-scrollto" data-scroll="modules">The ignite kit</li>
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto mobile-scrollto" data-scroll="demos">Our demos</li>
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto mobile-scrollto" data-scroll="footer-signup">Sign up</li>
       </ul>
     </section>
 
