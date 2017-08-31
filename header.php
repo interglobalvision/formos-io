@@ -49,10 +49,10 @@
     </div>
   </header>
 
-  <header id="mobile-header" class="header padding-top-tiny padding-bottom-tiny">
+  <header id="mobile-header" class="header padding-top-small padding-bottom-small">
     <div class="container">
-      <div class="grid-row align-items-center justify-between">
-        <div class="grid-item item-s-1">
+      <div class="grid-row align-items-center">
+        <div class="grid-item item-s-4">
           <span href="#" id="menu-toggle">
             <span class="open-menu">
               <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/menu.svg'); ?>
@@ -63,13 +63,11 @@
 
 </span>
         </div>
-        <div class="grid-item item-s-1">
+        <div class="grid-item item-s-4">
           <h1 class="u-hidden"><?php bloginfo('name'); ?></h1>
-          <div id="header-logo-holder">
+          <div id="mobile-header-logo-holder" class="text-align-center">
             <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
           </div>
-        </div>
-        <div class="grid-item item-s-1">
         </div>
       </div>
     </div>
