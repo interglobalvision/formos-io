@@ -1,8 +1,14 @@
+$header-height = 57px
+
 #wp-debug
   position: fixed
-  top: 0
-  left: 0
+  bottom: 0
+  right: 0
   color: red
+
+#main-container
+  position: relative
+  overflow-x: hidden
 
 .logo
   path
@@ -12,12 +18,56 @@
 
 #header
   display: none
-  background-color: $color-blue
-  font-size: 14px
 
 #header-logo-holder
   svg
     height: 1.7rem
+
+#mobile-header
+  background-color: $color-blue
+  font-size: 14px
+  position: fixed
+  width: 100%
+  z-index: 1000
+
+#menu-toggle
+  svg
+    height: 1rem
+
+.close-menu
+  display: none
+
+// MOBILE MENU
+#main-content,
+#mobile-menu
+  transition: transform $transition-speed-fast
+
+#mobile-menu
+  position: absolute
+  right: 100%
+  width: 100%
+  height: calc('100vh - ' + $header-height)
+  top: $header-height
+  max-width: 75vw
+  background: $color-dark-gray
+
+
+.menu-open
+
+  .open-menu
+    display: none
+
+  .close-menu
+    display: block
+
+  #main-content,
+  #mobile-menu
+    transform: translateX(75vw)
+
+#mobile-header-logo-holder
+  svg
+    height: 1.4rem
+
 
 // WHAT IS SECTION
 

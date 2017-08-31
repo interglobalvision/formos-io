@@ -19,7 +19,7 @@ Site = {
     $(document).ready(function () {
       _this.SplashVideo.init();
       _this.WhatIsVideo.init();
-      _this.Modules.init();
+      //_this.Modules.init();
     });
 
   },
@@ -187,18 +187,36 @@ Site.Menu = {
   init: function() {
     var _this = this;
 
+    $mobileHeader = $('#mobile-header');
+    // mobile scrollTo offset = mobile header height + top padding + bottom padding
+    _this.mobileHeaderOffset = $mobileHeader.outerHeight() + ($mobileHeader.innerHeight() - $mobileHeader.height());
+
     $('.js-scrollto').on('click', function() {
       var section = $(this).data('scroll');
+      var isMobile = $(this).hasClass('mobile-scrollto');
 
-      _this.scrollTo(section);
+      _this.scrollTo(section, isMobile);
     });
+
+    // Mobile Menu
+    if($('#menu-toggle').length) {
+      $('#menu-toggle').on('click', function() {
+        $('body').toggleClass('menu-open');
+      });
+    }
   },
 
-  scrollTo: function(section) {
+  scrollTo: function(section, isMobile) {
     var _this = this;
     var $target = $('#section-' + section);
+    var headerOffset = 0;
 
-    $('html, body').stop().animate({ scrollTop: $target.offset().top }, Site.animationSpeed);
+    if (isMobile) {
+      headerOffset = _this.mobileHeaderOffset;
+    }
+
+    $('body').removeClass('menu-open');
+    $('html, body').stop().animate({ scrollTop: $target.offset().top - headerOffset }, Site.animationSpeed);
   }
 };
 
