@@ -33,12 +33,10 @@
       }
 
       // Close grid row
-      if (!empty($module['module_name']) && !empty($module['module_video_mp4'])) {
+      if (!empty($module['module_name']) && !empty($module['module_image_id'])) {
 ?>
     <div class="grid-item item-m-6 item-l-3">
-      <video class="module-video" preload width="100%" muted>
-        <source src="<?php echo $module['module_video_mp4'];?>" type="video/mp4">
-      </video>
+      <?php echo wp_get_attachment_image($module['module_image_id'], 'l-3'); ?>
       <h3 class="font-size-basic margin-bottom-small"><?php echo $module['module_name']; ?></h3>
 <?php
         if (!empty($module['module_desc'])) {
