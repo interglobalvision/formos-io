@@ -19,7 +19,7 @@ Site = {
     $(document).ready(function () {
       _this.SplashVideo.init();
       _this.WhatIsVideo.init();
-      _this.Modules.init();
+      //_this.Modules.init();
     });
 
   },
@@ -192,12 +192,20 @@ Site.Menu = {
 
       _this.scrollTo(section);
     });
+
+    // Mobile Menu
+    if($('#menu-toggle').length) {
+      $('#menu-toggle').on('click', function() {
+        $('body').toggleClass('menu-open');
+      });
+    }
   },
 
   scrollTo: function(section) {
     var _this = this;
     var $target = $('#section-' + section);
 
+    $('body').removeClass('menu-open');
     $('html, body').stop().animate({ scrollTop: $target.offset().top }, Site.animationSpeed);
   }
 };

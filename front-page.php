@@ -4,7 +4,7 @@ get_header();
 
 <main id="main-content">
 
-  <div class="container margin-bottom-basic">
+  <div class="container margin-top-large margin-bottom-basic">
     <div class="grid-row">
       <div class="grid-item item-s-12 item-l-8 offset-l-2 text-align-center">
         <div id="splash-logo-holder">

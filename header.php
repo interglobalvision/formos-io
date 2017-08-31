@@ -27,7 +27,7 @@
 
 <section id="main-container">
 
-  <header id="header" class="padding-top-tiny padding-bottom-tiny margin-bottom-basic">
+  <header id="header" class="header padding-top-tiny padding-bottom-tiny">
     <div class="container">
       <div class="grid-row align-items-center">
         <div class="grid-item item-m-3">
@@ -48,3 +48,41 @@
       </div>
     </div>
   </header>
+
+  <header id="mobile-header" class="header padding-top-tiny padding-bottom-tiny">
+    <div class="container">
+      <div class="grid-row align-items-center justify-between">
+        <div class="grid-item item-s-1">
+          <span href="#" id="menu-toggle">
+            <span class="open-menu">
+              <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/menu.svg'); ?>
+            </span>
+            <span class="close-menu">
+              <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/cancel.svg'); ?>
+            </span>
+
+</span>
+        </div>
+        <div class="grid-item item-s-1">
+          <h1 class="u-hidden"><?php bloginfo('name'); ?></h1>
+          <div id="header-logo-holder">
+            <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
+          </div>
+        </div>
+        <div class="grid-item item-s-1">
+        </div>
+      </div>
+    </div>
+
+    <section id="mobile-menu" class="padding-top-basic">
+      <ul class="container grid-column justify-around font-uppercase">
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="what-is">What is formOS?</li>
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="how">How does it work?</li>
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="modules">The ignite kit</li>
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="demos">Our demos</li>
+        <li class="grid-item margin-top-small margin-bottom-small u-pointer js-scrollto" data-scroll="footer-signup">Sign up</li>
+      </ul>
+    </section>
+
+  </header>
+
