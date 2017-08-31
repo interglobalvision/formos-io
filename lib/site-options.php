@@ -89,6 +89,24 @@ function igv_register_theme_options_metabox() {
     'type'    => 'text',
   ) );
 
+   // Modules
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'How it works', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'how_title',
+    'type'    => 'title',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Six-sides video', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'six_sides_video',
+    'type'    => 'file',
+    'query_args' => array(
+      'type' => 'video/mp4',
+    ),
+  ) );
+
   // Modules
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'Modules', 'cmb2' ),
@@ -133,16 +151,6 @@ function igv_register_theme_options_metabox() {
     'desc'    => esc_html__( '', 'cmb2' ),
     'id'      => 'module_image',
     'type'    => 'file',
-  ) );
-
-  $front_page_options->add_field( array(
-    'name'    => esc_html__( 'Six-sides video', 'cmb2' ),
-    'desc'    => esc_html__( '', 'cmb2' ),
-    'id'      => 'six_sides_video',
-    'type'    => 'file',
-    'query_args' => array(
-      'type' => 'video/mp4',
-    ),
   ) );
 
   // Site options for general data
