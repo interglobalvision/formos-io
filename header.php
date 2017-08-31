@@ -35,7 +35,7 @@
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
         </div>
       </div>
-      <div class="grid-item item-m-11 padding-bottom-micro">
+      <div class="grid-item item-m-11 padding-bottom-micro no-gutter">
         <ul class="grid-row justify-around font-uppercase">
           <li class="grid-item u-pointer js-scrollto" data-scroll="what-is">What is formOS?</li>
           <li class="grid-item u-pointer js-scrollto" data-scroll="how">How does it work?</li>
@@ -58,8 +58,7 @@
             <span class="close-menu">
               <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/cancel.svg'); ?>
             </span>
-
-</span>
+          </span>
         </div>
         <div class="grid-item item-s-4">
           <h1 class="u-hidden"><?php bloginfo('name'); ?></h1>
