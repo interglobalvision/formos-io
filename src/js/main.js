@@ -19,7 +19,7 @@ Site = {
     $(document).ready(function () {
       _this.SplashVideo.init();
       _this.WhatIsVideo.init();
-      //_this.Modules.init();
+      _this.Modules.init();
     });
 
   },
