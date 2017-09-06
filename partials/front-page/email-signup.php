@@ -13,6 +13,13 @@ if (!empty($front_page_options['signup_form_action'])) {
       <h2 class="font-size-mid margin-bottom-small js-fix-widows">formOS is coming soon, stay updated:</h2>
       <form action="<?php echo $front_page_options['signup_form_action']; ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
         <input placeholder="your email address" type="email" name="EMAIL" id="mce-EMAIL">
+        <?php
+          if (!empty($front_page_options['signup_form_validation'])) {
+        ?>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="<?php echo $front_page_options['signup_form_validation']; ?>" tabindex="-1" value=""></div>
+        <?php
+          }
+        ?>
         <button type="submit">Join</button>
       </form>
     </div>
