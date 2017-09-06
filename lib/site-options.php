@@ -91,7 +91,7 @@ function igv_register_theme_options_metabox() {
 
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'Mailchimp signup form validation code', 'cmb2' ),
-    'desc'    => esc_html__( 'just the name of the hidden input before the submit button', 'cmb2' ),
+    'desc'    => esc_html__( 'just the value of the name attribute of the hidden input before the submit button', 'cmb2' ),
     'id'      => 'signup_form_validation',
     'type'    => 'text',
   ) );
