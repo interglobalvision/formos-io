@@ -66,7 +66,7 @@ Site.SplashVideo = {
       _this.canAutoplay = true;
 
       // Set threshold
-      _this.threshold = _this.$video1.offset().top - ($(window).height() / 3) * 2;
+      _this.threshold = (_this.$video1.offset().top / 6);
 
     }
 
