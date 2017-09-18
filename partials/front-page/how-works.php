@@ -90,7 +90,7 @@
         <p>App Store and Google Play – games published by formOS and third party publishers</p>
       </div>
       <div class="grid-item how-item-large">
-        <p>iOs, Apple TV*, Android and Google Play*</p>
+        <p>iOS, Apple TV*, Android and Google Play*</p>
       </div>
       <div class="grid-item how-item-large">
         <p>4 units + charger in the Ignite Kit</p>
