@@ -1,4 +1,4 @@
-<div id="section-how" class="container margin-bottom-basic">
+<div id="section-how" class="container margin-bottom-mid">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-basic">
       <h2 class="font-size-mid js-fix-widows">How formOS works</h2>
@@ -106,7 +106,7 @@ $front_page_options = get_site_option('_igv_front_page_options');
 if (!empty($front_page_options['six_sides_video'])) {
 ?>
 
-<div class="container padding-bottom-basic">
+<div class="container margin-bottom-mid">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-small">
       <h3 class="font-size-basic js-fix-widows">A formOS unit has 6 connecting sides</h3>
