@@ -200,25 +200,11 @@ Site.Modules = {
     _this.bindScroll();
   },
 
-  bindHover: function(video) {
-    var _this = this;
-
-    // Bind mouse over
-    $(video).on('mouseover.videoModule', function(event) {
-      this.play();
-    });
-
-    // Bind mouse leave
-    $(video).on('mouseleave', function(event) {
-      this.pause();
-    });
-  },
-
   bindScroll: function() {
     var _this = this;
 
     // On window scroll
-    $(window).scroll(function(event) {
+    $(window).on('scroll.playOnScroll', function(event) {
       // Get the scroll position
       var scrollTop = $(window).scrollTop();
 
@@ -232,6 +218,7 @@ Site.Modules = {
 
     if(!_this.played && scrollTop > _this.threshold) { // First video is to play and postition is below threshold
       _this.playAnimation();
+      $(window).off('scroll.playOnScroll');
     }
   },
 
@@ -242,6 +229,8 @@ Site.Modules = {
 
     _this.$videos.each( function(index) {
       var video = this;
+
+      video.loop = true;
 
       setTimeout( function(callback) {
         video.play();
