@@ -22,11 +22,19 @@ function igv_register_theme_options_metabox() {
     // 'display_cb'      => false, // Override the options-page form output (CMB2_Hookup::options_page_output()).
   ) );
 
+  // SPLASH
   $front_page_options->add_field( array(
-    'name'    => esc_html__( 'Videos', 'cmb2' ),
+    'name'    => esc_html__( 'Splash', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
-    'id'      => 'splash_video_title',
+    'id'      => 'splash_title',
     'type'    => 'title',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Splash title', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'splash_title_text',
+    'type'    => 'text',
   ) );
 
   $front_page_options->add_field( array(
@@ -39,6 +47,57 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  // BELOW THE FOLD
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Below the fold', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'btf_title',
+    'type'    => 'title',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'First title', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "Play with the power of nature"', 'cmb2' ),
+    'id'      => 'btf_title_text',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'First text', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "Enter formOS, an entertainment system inspired by the modular qualities of Nature…"', 'cmb2' ),
+    'id'      => 'btf_first_text',
+    'type'    => 'text',
+  ) );
+
+  // WHAT EXACTLY IS FORMOS
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'What\'s formOS', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'what_is_title',
+    'type'    => 'title',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'First title', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "But what exactly is formOS?"', 'cmb2' ),
+    'id'      => 'what_is_title_text',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'First text', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "formOS is a modular gaming system that integrates physical and digital…"', 'cmb2' ),
+    'id'      => 'what_is_first_text',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Video text', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "See formOS in action:"', 'cmb2' ),
+    'id'      => 'what_is_video_text',
+    'type'    => 'text',
+  ) );
+
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'See formOS in action video', 'cmb2' ),
     'desc'    => esc_html__( 'for what is section', 'cmb2' ),
@@ -48,6 +107,89 @@ function igv_register_theme_options_metabox() {
       'type' => 'video/mp4',
     ),
   ) );
+
+  // HOW FORMOS WORK
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'How formOS works', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'how_works_title',
+    'type'    => 'title',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Title', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "How formOS works"', 'cmb2' ),
+    'id'      => 'how_works_title_text',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'First title', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "formOS game/app library"', 'cmb2' ),
+    'id'      => 'how_works_first_title',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'First text', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "App Store and Google Play – games published by formOS and third party publishers"', 'cmb2' ),
+    'id'      => 'how_works_first_text',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Second title', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "Your own device"', 'cmb2' ),
+    'id'      => 'how_works_second_title',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Second text', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "iOS, Apple TV*, Android and Google Play*"', 'cmb2' ),
+    'id'      => 'how_works_second_text',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Third title', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "formOS units"', 'cmb2' ),
+    'id'      => 'how_works_third_title',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Third text', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "4 units + charger in the Ignite Kit"', 'cmb2' ),
+    'id'      => 'how_works_third_text',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Six-sides title', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "A formOS unit has 6 connecting sides"', 'cmb2' ),
+    'id'      => 'how_works_six_sides_title',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Six-sides video', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'six_sides_video',
+    'type'    => 'file',
+    'query_args' => array(
+      'type' => 'video/mp4',
+    ),
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Six-sides text', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "formOS can be connected in an infinite amount of ways"', 'cmb2' ),
+    'id'      => 'how_works_six_sides_text',
+    'type'    => 'text',
+  ) );
+
+
 
   // Countdown
   $front_page_options->add_field( array(
@@ -84,24 +226,6 @@ function igv_register_theme_options_metabox() {
     'desc'    => esc_html__( 'just the value of the name attribute of the hidden input before the submit button', 'cmb2' ),
     'id'      => 'signup_form_validation',
     'type'    => 'text',
-  ) );
-
-   // Modules
-  $front_page_options->add_field( array(
-    'name'    => esc_html__( 'How it works', 'cmb2' ),
-    'desc'    => esc_html__( '', 'cmb2' ),
-    'id'      => 'how_title',
-    'type'    => 'title',
-  ) );
-
-  $front_page_options->add_field( array(
-    'name'    => esc_html__( 'Six-sides video', 'cmb2' ),
-    'desc'    => esc_html__( '', 'cmb2' ),
-    'id'      => 'six_sides_video',
-    'type'    => 'file',
-    'query_args' => array(
-      'type' => 'video/mp4',
-    ),
   ) );
 
   // Modules
