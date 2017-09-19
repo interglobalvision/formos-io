@@ -7,7 +7,7 @@
     $modules_count = count($modules);
 ?>
 
-<div id="section-modules" class="container margin-bottom-mid">
+<div id="section-modules" class="container margin-bottom-small">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center font-size-mid margin-bottom-basic">
       <h2 class="js-fix-widows desktop-only">THE formOS Ignite Kit: 4 modules to start with</h2>

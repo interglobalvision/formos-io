@@ -28,7 +28,7 @@
 <div id="section-countdown" class="container margin-bottom-large">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center">
-      <h2 class="font-size-basic margin-bottom-small">Countdown to Kickstarter campaign:</h2>
+      <h2 class="font-size-basic margin-bottom-small">Countdown to our Kickstarter campaign:</h2>
       <div id="countdown" class="grid-row justify-center font-size-small color-blue" data-end="<?php echo $end->format('U'); ?>">
         <div class="grid-item">
           <div id="countdown-days" class="font-size-countdown"><?php echo floor($daysLeft); ?></div>

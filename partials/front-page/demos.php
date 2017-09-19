@@ -7,10 +7,12 @@
   if ($demos->have_posts()) {
 ?>
 <div id="section-demos" class="container margin-bottom-mid">
-  <div class="grid-row margin-bottom-basic">
-    <div class="grid-item item-s-12 text-align-center">
+  <div class="grid-row margin-bottom-basic text-align-center">
+    <div class="grid-item item-s-12">
       <h2 class="font-size-mid margin-bottom-small">The formOS demos and beyond...</h2>
-      <h3 class="font-size-basic">We developed a suite of demos to test the different ways in which you can play and create with formOS</h3>
+    </div>
+    <div class="grid-item item-s-12 item-m-8 offset-m-2 item-l-6 offset-l-3">
+      <h3 class="font-size-basic js-fix-widows">We developed a suite of demos to test the different ways in which you can play and create with formOS</h3>
     </div>
   </div>
   <div class="grid-row">
