@@ -68,6 +68,22 @@ $header-height = 57px
   svg
     height: 1.4rem
 
+// SPLASH
+#splash
+  position: relative
+  min-height: calc('100vh - ' + $header-height)
+
+#splash-video-container
+  position: absolute
+  top: 0
+  z-index: -1
+  left: 0
+  right: 0
+  min-height: calc('100vh - ' + $header-height)
+
+  video
+    max-height: 100vh
+
 
 // WHAT IS SECTION
 

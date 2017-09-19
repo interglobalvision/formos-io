@@ -4,8 +4,8 @@ get_header();
 
 <main id="main-content">
 
-  <div class="container margin-top-large margin-bottom-basic">
-    <div class="grid-row">
+  <div id="splash" class="container padding-top-large margin-bottom-large">
+    <div class="grid-row margin-bottom-basic">
       <div class="grid-item item-s-12 item-l-8 offset-l-2 text-align-center">
         <div id="splash-logo-holder">
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
@@ -14,9 +14,9 @@ get_header();
         <h2 class="font-size-extra color-gray">The first modular entertainment system.</h2>
       </div>
     </div>
+    <?php get_template_part('partials/front-page/splash-video'); ?>
   </div>
 
-  <?php get_template_part('partials/front-page/splash-video'); ?>
 
   <div class="container margin-bottom-large text-align-center">
     <div class="grid-row">

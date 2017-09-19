@@ -40,16 +40,6 @@ function igv_register_theme_options_metabox() {
   ) );
 
   $front_page_options->add_field( array(
-    'name'    => esc_html__( 'Splash video reversed (mp4)', 'cmb2' ),
-    'desc'    => esc_html__( 'for backwards play on scroll up', 'cmb2' ),
-    'id'      => 'splash_video_reversed_mp4',
-    'type'    => 'file',
-    'query_args' => array(
-      'type' => 'video/mp4',
-    ),
-  ) );
-
-  $front_page_options->add_field( array(
     'name'    => esc_html__( 'See formOS in action video', 'cmb2' ),
     'desc'    => esc_html__( 'for what is section', 'cmb2' ),
     'id'      => 'what_is_video',
