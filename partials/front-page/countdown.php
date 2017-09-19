@@ -29,25 +29,25 @@
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center">
       <h2 class="font-size-basic margin-bottom-small">Countdown to Kickstarter campaign:</h2>
-      <div id="countdown" class="grid-row justify-center font-size-small color-gray" data-end="<?php echo $end->format('U'); ?>">
+      <div id="countdown" class="grid-row justify-center font-size-small color-blue" data-end="<?php echo $end->format('U'); ?>">
         <div class="grid-item">
           <div id="countdown-days" class="font-size-countdown"><?php echo floor($daysLeft); ?></div>
-          <span class="desktop-only">Days</span>
+          <span class="font-uppercase font-size-tiny">Days</span>
         </div>
         <div class="grid-item no-gutter font-size-countdown">:</div>
         <div class="grid-item">
           <div id="countdown-hours" class="font-size-countdown"><?php echo floor($hoursLeft); ?></div>
-          <span class="desktop-only">Hours</span>
+          <span class="font-uppercase font-size-tiny">Hours</span>
         </div>
         <div class="grid-item no-gutter font-size-countdown">:</div>
         <div class="grid-item">
           <div id="countdown-minutes" class="font-size-countdown"><?php echo floor($minutesLeft); ?></div>
-          <span class="desktop-only">Minutes</span>
+          <span class="font-uppercase font-size-tiny">Minutes</span>
         </div>
         <div class="grid-item no-gutter font-size-countdown">:</div>
         <div class="grid-item">
           <div id="countdown-seconds" class="font-size-countdown"><?php echo floor($minutesLeftSecondsRemainder); ?></div>
-          <span class="desktop-only">Seconds</span>
+          <span class="font-uppercase font-size-tiny">Seconds</span>
         </div>
       </div>
     </div>

@@ -6,10 +6,10 @@
 
   if ($demos->have_posts()) {
 ?>
-<div id="section-demos" class="container margin-bottom-large">
+<div id="section-demos" class="container margin-bottom-mid">
   <div class="grid-row margin-bottom-basic">
     <div class="grid-item item-s-12 text-align-center">
-      <h2 class="font-size-basic margin-bottom-small">The formOS demos and beyond...</h2>
+      <h2 class="font-size-mid margin-bottom-small">The formOS demos and beyond...</h2>
       <h3 class="font-size-basic">We developed a suite of demos to test the different ways in which you can play and create with formOS</h3>
     </div>
   </div>
@@ -19,9 +19,9 @@
       $demos->the_post();
       $type = get_post_meta($post->ID, '_igv_type', true);
 ?>
-    <div class="grid-item item-s-12 item-m-4 margin-bottom-basic">
-      <?php the_post_thumbnail(); ?>
-      <h3 class="margin-bottom-tiny"><?php the_title(); ?></h3>
+    <div class="grid-item item-s-6 item-m-4 margin-bottom-basic">
+      <?php the_post_thumbnail('demo-thumb', array('class'=>'demo-thumb margin-bottom-tiny')); ?>
+      <h3 class="margin-bottom-tiny font-size-basic"><?php the_title(); ?></h3>
       <div class="font-size-small">
         <?php
           the_content();

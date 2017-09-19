@@ -5,7 +5,7 @@
     </div>
   </div>
 
-  <div class="mobile-only">
+  <div id="how-column">
     <div class="grid-row align-items-center margin-bottom-small">
       <div class="grid-item item-s-6">
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
@@ -15,9 +15,9 @@
       </div>
     </div>
     <div class="grid-row margin-bottom-small">
-      <div class="grid-item item-s-6 mobile-how-illustration text-align-center font-size-tiny color-gray">
-        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_2.svg'); ?>
-        <div>Download into your own device</div>
+      <div class="grid-item item-s-6 mobile-how-illustration text-align-center font-size-tiny color-blue">
+        <div class="margin-bottom-tiny"><?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_2.svg'); ?></div>
+        <div>Download into <br>your own device</div>
       </div>
     </div>
     <div class="grid-row align-items-center margin-bottom-small">
@@ -29,9 +29,9 @@
       </div>
     </div>
     <div class="grid-row margin-bottom-small">
-      <div class="grid-item item-s-6 mobile-how-illustration text-align-center font-size-tiny color-gray">
-        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_4.svg'); ?>
-        <div>Wireless communication</div>
+      <div class="grid-item item-s-6 mobile-how-illustration text-align-center font-size-tiny color-blue">
+        <div class="margin-bottom-tiny"><?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_4.svg'); ?></div>
+        <div>Wireless <br>communication</div>
       </div>
     </div>
     <div class="grid-row align-items-center margin-bottom-small">
@@ -44,14 +44,14 @@
     </div>
   </div>
 
-  <div class="desktop-only">
+  <div id="how-row">
     <div class="grid-row align-items-center justify-between margin-bottom-small text-align-center color-gray">
       <div class="grid-item how-item-large">
         <div class="margin-bottom-tiny">
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
         </div>
       </div>
-      <div class="grid-item how-item-small how-illustration-caption">
+      <div class="grid-item how-item-small how-illustration-caption color-blue">
         <div class="margin-bottom-tiny">
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_2.svg'); ?>
         </div>
@@ -62,7 +62,7 @@
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_3.svg'); ?>
         </div>
       </div>
-      <div class="grid-item how-item-small how-illustration-caption">
+      <div class="grid-item how-item-small how-illustration-caption color-blue">
         <div class="margin-bottom-tiny">
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_4.svg'); ?>
         </div>
@@ -113,7 +113,7 @@ if (!empty($front_page_options['six_sides_video'])) {
     </div>
   </div>
   <div class="grid-row">
-    <div class="grid-item item-s-8 offset-s-2 item-m-6 offset-l-3 item-l-4 offset-l-4 text-align-center">
+    <div class="grid-item item-s-8 offset-s-2 item-m-6 offset-m-3 item-l-4 offset-l-4 text-align-center">
       <video class="module-video" preload width="100%" muted>
         <source src="<?php echo $front_page_options['six_sides_video'];?>" type="video/mp4">
       </video>
@@ -147,7 +147,7 @@ if (!empty($front_page_options['six_sides_video'])) {
     </div>
     <div class="grid-item item-s-6 item-m-3 text-align-center">
       <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_more.svg'); ?>
-      <h4>And many more...</h4>
+      <h4>And many <br>more...</h4>
     </div>
   </div>
 </div>

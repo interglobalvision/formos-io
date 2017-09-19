@@ -3,17 +3,43 @@
   font-size: 14px
   display: block
 
+// WHAT IS SECTION
+
+#what-is-video-player
+
+  &:hover
+    #what-is-video
+      box-shadow: 0px 21px 27px 1px $color-gray-transparent
+
+  &.playing
+    #what-is-video
+      box-shadow: 0px 21px 27px 1px $color-gray-transparent
+
+#what-is-video
+  box-shadow: 0px 12px 16px 1px $color-gray-transparent
+
 // HOW IT WORKS
 #section-how
   .how-illustration-caption
     font-size: 12px
-    letter-spacing: .2em
+    //letter-spacing: .2em
+
+#connection-ways-icon-row
+  svg
+    max-width: none
+
+// DEMOS
+.demo-thumb
+  border-radius: $margin-micro
+  max-height: 301px
 
 // FOOTER SIGNUP
+#signup-logo-holder
+  svg
+    height: 90px
+
 #section-footer-signup
-  input,
-  button
-    border-radius: $margin-tiny
+  font-size: $font-size-mid
   input
     width: 500px
     padding: $margin-tiny $margin-small
@@ -21,6 +47,7 @@
     margin-bottom: $margin-small
   button
     padding: $margin-tiny $margin-basic
+    border-radius: $margin-micro
 
 // COUNTDOWN
 .font-size-countdown

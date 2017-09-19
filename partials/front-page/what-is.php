@@ -13,7 +13,7 @@
   if (!empty($front_page_options['what_is_video'])) {
 ?>
 
-<div class="container margin-bottom-large">
+<div class="container margin-bottom-mid">
   <div class="grid-row">
     <div class="grid-item item-s-12 item-m-10 offset-m-1 text-align-center">
       <h2 class="font-size-basic margin-bottom-basic js-fix-widows">See formOS in action:</h2>

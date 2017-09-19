@@ -10,7 +10,7 @@ if (!empty($front_page_options['signup_form_action'])) {
       <div id="signup-logo-holder" class="margin-bottom-small">
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
       </div>
-      <h2 class="font-size-mid margin-bottom-small js-fix-widows">formOS is coming soon, stay updated:</h2>
+      <h2 class="margin-bottom-small js-fix-widows">formOS is coming soon, stay updated:</h2>
       <form action="<?php echo $front_page_options['signup_form_action']; ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
         <input placeholder="your email address" type="email" name="EMAIL" id="mce-EMAIL">
         <?php
@@ -20,7 +20,7 @@ if (!empty($front_page_options['signup_form_action'])) {
         <?php
           }
         ?>
-        <button type="submit">Join</button>
+        <button type="submit" class="font-uppercase">Join</button>
       </form>
     </div>
   </div>

@@ -29,13 +29,13 @@
 
   <header id="header" class="header padding-top-tiny padding-bottom-tiny">
     <div class="grid-row align-items-center">
-      <div class="grid-item item-m-1">
+      <div class="grid-item item-m-2">
         <h1 class="u-hidden"><?php bloginfo('name'); ?></h1>
         <div id="header-logo-holder">
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
         </div>
       </div>
-      <div class="grid-item item-m-11 padding-bottom-micro no-gutter">
+      <div class="grid-item item-m-10 no-gutter">
         <ul class="grid-row justify-around font-uppercase">
           <li class="grid-item u-pointer js-scrollto" data-scroll="what-is">What is formOS?</li>
           <li class="grid-item u-pointer js-scrollto" data-scroll="how">How does it work?</li>
