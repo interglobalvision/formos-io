@@ -4,8 +4,8 @@ get_header();
 
 <main id="main-content">
 
-  <div id="splash" class="container padding-top-large margin-bottom-large">
-    <div class="grid-row margin-bottom-basic">
+  <div id="splash" class="container">
+    <div class="grid-row">
       <div class="grid-item item-s-12 item-l-8 offset-l-2 text-align-center">
         <div id="splash-logo-holder">
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
