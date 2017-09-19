@@ -1,4 +1,4 @@
-$header-height = 64px
+$header-height = 80px
 
 // SPLASH
 #splash
@@ -9,6 +9,20 @@ $header-height = 64px
   video
     height: calc('100vh - ' + $header-height)
 
+// WHAT IS SECTION
+#what-is-video-player
+
+  &:hover
+    #what-is-video
+      box-shadow: 0px 27px 36px 1px $color-gray-transparent
+
+  &.playing
+    #what-is-video
+      box-shadow: 0px 27px 36px 1px $color-gray-transparent
+
+#what-is-video
+  box-shadow: 0px 18px 27px 1px $color-gray-transparent
+
 // HOW IT WORKS
 #section-how
   .how-illustration-caption
@@ -16,3 +30,16 @@ $header-height = 64px
     svg
       max-width: 60px
       max-height: 60px
+
+// DEMOS
+.demo-thumb
+  border-radius: $margin-micro
+  max-height: 360px
+
+// FOOTER SIGNUP
+#signup-logo-holder
+  svg
+    height: 110px
+
+#section-footer-signup
+  font-size: $font-size-mid

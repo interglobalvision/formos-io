@@ -14,8 +14,11 @@ $header-height = 57px
   path
     fill: $color-black
 
+html, body
+  font-variant-ligatures: none
+
 #main-content
-  padding-top: $header-height 
+  padding-top: $header-height
 
 // HEADER
 
@@ -102,7 +105,7 @@ $header-height = 57px
         fill: $color-black
         transition: all $transition-speed-fast
     #what-is-video
-      box-shadow: -6px 14px 65px 1px $color-gray
+      box-shadow: 0px 7px 14px 0px $color-gray-transparent
 
   &.playing
     transform: scale(1)
@@ -110,7 +113,7 @@ $header-height = 57px
     #what-is-video-play-trigger
       display: none
     #what-is-video
-      box-shadow: -6px 14px 65px 1px $color-gray
+      box-shadow: 0px 7px 14px 0px $color-gray-transparent
 
 #what-is-video-play-trigger
   position: absolute
@@ -127,7 +130,7 @@ $header-height = 57px
     fill: $color-gray
 
 #what-is-video
-  box-shadow: -6px 14px 20px 1px $color-gray
+  box-shadow: 0px 4px 8px 0px $color-gray-transparent
   border-radius: 8px
   border: 1px solid $color-gray
   transition: all $transition-speed
@@ -136,28 +139,41 @@ $header-height = 57px
 
 #splash-logo-holder
   svg
-    height: 7rem
+    height: 80px
 
 // HOW IT WORKS
+#how-row
+  display: none
+
 .mobile-how-illustration
   svg
     max-width: 50px
     max-height: 50px
+    &.icon-small
+      transform: rotate(90deg)
 
 #connection-ways-icon-row
   svg
-    max-width: 300px
+    max-width: 170px
+
+// DEMOS
+.demo-thumb
+  border: 1px solid $color-black
+  border-radius: $margin-micro
+  width: auto
+  max-height: 44.5vw
 
 // FOOTER SIGNUP
 #signup-logo-holder
   svg
-    height: 3rem
+    height: 50px
 
 #section-footer-signup
+  font-size: $font-size-small
   input,
   button
     border-width: 0
-    border-radius: $margin-tiny
+    border-radius: 0
     letter-spacing: $font-tracking-basic
   input
     width: 320px
@@ -167,17 +183,35 @@ $header-height = 57px
     margin-bottom: $margin-small
     border-bottom: 1px solid $color-gray
     &:focus
-      outline-color: $color-gray
+      outline-color: $color-blue
+    &::-webkit-input-placeholder
+      color: $color-blue
+    &::-moz-placeholder
+      color: $color-blue
+    &:-ms-input-placeholder
+      color: $color-blue
+    &:-moz-placeholder
+      color: $color-blue
   button
     padding: $margin-tiny $margin-basic
     background-color: $color-black
+    border-radius: $margin-micro
     color: $color-white
     transition: background-color $transition-speed-fast
+    cursor: pointer
     &:hover
-      background-color: $color-gray
+      background-color: $color-blue
     &:focus
       outline: 0
 
 // COUNTDOWN
 .font-size-countdown
-  font-size: 30px
+  font-size: 36px
+
+// MODULES
+
+#section-modules
+  h3
+    margin-top: $margin-basic
+  li
+    margin-bottom: .5em

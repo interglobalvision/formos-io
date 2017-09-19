@@ -16,12 +16,37 @@ $header-height = 49px
 #splash
   min-height: calc('100vh - ' + $header-height)
 
+#splash-logo-holder
+  svg
+    height: 90px
+
 #splash-video-container
 
   video
     height: calc('100vh - ' + $header-height)
 
+// WHAT IS SECTION
+
+#what-is-video-player
+
+  &:hover
+    #what-is-video
+      box-shadow: 0px 14px 21px 0px $color-gray-transparent
+
+  &.playing
+    #what-is-video
+      box-shadow: 0px 14px 21px 0px $color-gray-transparent
+
+#what-is-video
+  box-shadow: 0px 8px 12px 0px $color-gray-transparent
+
 // HOW IT WORKS
+#how-row
+  display: block
+
+#how-column
+  display: none
+
 #section-how
   .how-item-small
     width: 17%
@@ -30,16 +55,23 @@ $header-height = 49px
 
   .how-illustration-caption
     font-size: 10px
-    letter-spacing: .15em
+    //letter-spacing: .15em
     svg
       max-width: 50px
       max-height: 50px
 
+// DEMOS
+.demo-thumb
+  border-radius: $margin-micro
+  max-height: 198px
+
 // FOOTER SIGNUP
+#signup-logo-holder
+  svg
+    height: 70px
+
 #section-footer-signup
-  input,
-  button
-    border-radius: $margin-tiny
+  font-size: $font-size-mid
   input
     width: 400px
     padding: $margin-tiny $margin-small
@@ -47,7 +79,14 @@ $header-height = 49px
     margin-bottom: $margin-small
   button
     padding: $margin-tiny $margin-basic
+    border-radius: $margin-micro
 
 // COUNTDOWN
 .font-size-countdown
   font-size: 80px
+
+// MODULES
+#section-modules
+  text-align: center
+  h3
+    margin-top: 0

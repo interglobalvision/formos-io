@@ -140,7 +140,7 @@ function igv_register_theme_options_metabox() {
   $front_page_options->add_group_field($modules_group, array(
     'name'    => esc_html__( 'Specs', 'cmb2' ),
     'id'      => 'module_specs',
-    'type'    => 'textarea_small',
+    'type'    => 'wysiwyg',
   ) );
 
   $front_page_options->add_group_field($modules_group, array(

@@ -2,7 +2,7 @@
 
 $front_page_options = get_site_option('_igv_front_page_options');
 
-if (!empty($front_page_options['splash_video_mp4']) && !empty($front_page_options['splash_video_reversed_mp4'])) {
+if (!empty($front_page_options['splash_video_mp4'])) {
 ?>
 
 <div id="splash-video-container">
