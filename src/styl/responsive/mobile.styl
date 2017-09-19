@@ -17,6 +17,9 @@ $header-height = 57px
 html, body
   font-variant-ligatures: none
 
+#main-content
+  padding-top: $header-height
+
 // HEADER
 
 #header
@@ -70,6 +73,21 @@ html, body
 #mobile-header-logo-holder
   svg
     height: 1.4rem
+
+// SPLASH
+#splash
+  position: relative
+  min-height: calc('100vh - ' + $header-height)
+
+#splash-video-container
+  position: absolute
+  top: 0
+  z-index: -1
+  left: 0
+  right: 0
+
+  video
+    height: calc('100vh - ' + $header-height)
 
 
 // WHAT IS SECTION
@@ -126,7 +144,7 @@ html, body
 // HOW IT WORKS
 #how-row
   display: none
-  
+
 .mobile-how-illustration
   svg
     max-width: 50px

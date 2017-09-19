@@ -4,7 +4,7 @@ get_header();
 
 <main id="main-content">
 
-  <div class="container margin-top-large margin-bottom-basic">
+  <div id="splash" class="container">
     <div class="grid-row">
       <div class="grid-item item-s-12 item-l-8 offset-l-2 text-align-center">
         <div id="splash-logo-holder">
@@ -14,9 +14,9 @@ get_header();
         <h2 class="font-size-extra color-blue">The first modular entertainment system.</h2>
       </div>
     </div>
+    <?php get_template_part('partials/front-page/splash-video'); ?>
   </div>
 
-  <?php get_template_part('partials/front-page/splash-video'); ?>
 
   <div class="container margin-bottom-large text-align-center">
     <div class="grid-row">
