@@ -79,6 +79,10 @@ html, body
   position: relative
   min-height: calc('100vh - ' + $header-height)
 
+#splash-logo-holder
+  margin-top: 4vh
+  margin-bottom: 1vh
+
 #splash-video-container
   position: absolute
   top: 0
@@ -145,16 +149,17 @@ html, body
 #how-row
   display: none
 
-.mobile-how-illustration
+#how-column
   svg
-    max-width: 50px
-    max-height: 50px
+    max-height: 200px
     &.icon-small
+      max-height: 50px
       transform: rotate(90deg)
 
 #connection-ways-icon-row
-  svg
-    max-width: 170px
+  .ways-item
+    svg
+      max-height: 200px
 
 // DEMOS
 .demo-thumb

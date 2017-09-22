@@ -7,11 +7,11 @@ get_header();
   <div id="splash" class="container margin-bottom-basic">
     <div class="grid-row">
       <div class="grid-item item-s-12 item-l-8 offset-l-2 text-align-center">
-        <div id="splash-logo-holder" class="margin-top-small margin-bottom-tiny">
+        <div id="splash-logo-holder">
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
         </div>
 
-        <h2 class="font-size-extra color-blue js-fix-widows">The first modular <br>entertainment system.</h2>
+        <h2 class="font-size-extra color-blue js-fix-widows line-tighter">The first modular <br>entertainment system.</h2>
       </div>
     </div>
     <?php get_template_part('partials/front-page/splash-video'); ?>
