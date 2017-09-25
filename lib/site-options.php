@@ -86,7 +86,7 @@ function igv_register_theme_options_metabox() {
     'type'    => 'text',
   ) );
 
-   // Modules
+   // How it works
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'How it works', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
@@ -112,8 +112,46 @@ function igv_register_theme_options_metabox() {
     'type'    => 'title',
   ) );
 
+  $central_module_group = $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Central Module', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'central_module',
+    'type'    => 'group',
+    'repeatable' => false
+  ) );
+
+  $front_page_options->add_group_field($central_module_group, array(
+    'name'    => esc_html__( 'Name', 'cmb2' ),
+    'id'      => 'module_name',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_group_field($central_module_group, array(
+    'name'    => esc_html__( 'Description', 'cmb2' ),
+    'id'      => 'module_desc',
+    'type'    => 'textarea_small',
+  ) );
+
+  $front_page_options->add_group_field($central_module_group, array(
+    'name'    => esc_html__( 'Specs', 'cmb2' ),
+    'id'      => 'module_specs',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+    ),
+  ) );
+
+  $front_page_options->add_group_field($central_module_group, array(
+    'name'    => esc_html__( 'Image', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'module_image',
+    'type'    => 'file',
+    'preview_size' => 'medium'
+  ) );
+
   $modules_group = $front_page_options->add_field( array(
-    'name'    => esc_html__( '', 'cmb2' ),
+    'name'    => esc_html__( 'System Modules', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
     'id'      => 'modules',
     'type'    => 'group',
@@ -141,6 +179,10 @@ function igv_register_theme_options_metabox() {
     'name'    => esc_html__( 'Specs', 'cmb2' ),
     'id'      => 'module_specs',
     'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+    ),
   ) );
 
   $front_page_options->add_group_field($modules_group, array(
@@ -148,6 +190,7 @@ function igv_register_theme_options_metabox() {
     'desc'    => esc_html__( '', 'cmb2' ),
     'id'      => 'module_image',
     'type'    => 'file',
+    'preview_size' => 'medium'
   ) );
 
   // Site options for general data
