@@ -106,7 +106,7 @@ $front_page_options = get_site_option('_igv_front_page_options');
 if (!empty($front_page_options['six_sides_video'])) {
 ?>
 
-<div class="container margin-bottom-small">
+<div class="container margin-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-small">
       <h3 class="font-size-basic js-fix-widows">A formOS unit has 6 connecting sides</h3>
@@ -132,21 +132,29 @@ if (!empty($front_page_options['six_sides_video'])) {
       <h3 class="font-size-basic js-fix-widows">(here are a few basic ones)</h3>
     </div>
   </div>
-  <div id="connection-ways-icon-row" class="grid-row">
-    <div class="grid-item item-s-6 item-m-3 text-align-center">
-      <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_sphere.svg'); ?>
+  <div id="connection-ways-icon-row" class="grid-row justify-center">
+    <div class="grid-item item-s-6 ways-item text-align-center">
+      <div class="margin-bottom-tiny">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_sphere.svg'); ?>
+      </div>
       <h4>Sphere</h4>
     </div>
-    <div class="grid-item item-s-6 item-m-3 text-align-center">
-      <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_line.svg'); ?>
+    <div class="grid-item item-s-6 ways-item text-align-center">
+      <div class="margin-bottom-tiny">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_line.svg'); ?>
+      </div>
       <h4>Line</h4>
     </div>
-    <div class="grid-item item-s-6 item-m-3 text-align-center">
-      <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_arc.svg'); ?>
+    <div class="grid-item item-s-6 ways-item text-align-center">
+      <div class="margin-bottom-tiny">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_arc.svg'); ?>
+      </div>
       <h4>Arc</h4>
     </div>
-    <div class="grid-item item-s-6 item-m-3 text-align-center">
-      <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_more.svg'); ?>
+    <div class="grid-item item-s-6 ways-item text-align-center">
+      <div class="margin-bottom-tiny">
+        <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_more.svg'); ?>
+      </div>
       <h4>And many <br>more...</h4>
     </div>
   </div>

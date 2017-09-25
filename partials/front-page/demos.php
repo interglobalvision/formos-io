@@ -21,7 +21,7 @@
       $demos->the_post();
       $type = get_post_meta($post->ID, '_igv_type', true);
 ?>
-    <div class="grid-item item-s-6 item-m-4 margin-bottom-basic">
+    <div class="grid-item demos-item item-s-6 item-m-4 margin-bottom-basic">
       <?php the_post_thumbnail('demo-thumb', array('class'=>'demo-thumb margin-bottom-tiny')); ?>
       <h3 class="margin-bottom-tiny font-size-basic"><?php the_title(); ?></h3>
       <div class="font-size-small">
