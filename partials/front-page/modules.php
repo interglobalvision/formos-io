@@ -13,7 +13,7 @@
 <?php
   if (!empty($front_page_options['modules_title_text'])) {
 ?>
-      <h2 class="js-fix-widows mobile-only"><?php echo apply_filters('the_content', $front_page_options['modules_title_text']); ?></h2>
+      <h2 class="js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['modules_title_text']); ?></h2>
 <?php
   }
 ?>
