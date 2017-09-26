@@ -1,4 +1,6 @@
 <?php
+  $front_page_options = get_site_option('_igv_front_page_options');
+
   $demos = new WP_Query(array(
     'post_type' => 'demo',
     'nopaging' => true
@@ -9,10 +11,22 @@
 <div id="section-demos" class="container margin-bottom-mid">
   <div class="grid-row margin-bottom-basic text-align-center">
     <div class="grid-item item-s-12">
-      <h2 class="font-size-mid margin-bottom-small">The formOS demos and beyond...</h2>
+<?php
+  if (!empty($front_page_options['demos_title_text'])) {
+?>
+      <h2 class="font-size-mid margin-bottom-small"><?php echo apply_filters('the_content', $front_page_options['demos_title_text']); ?></h2>
+<?php
+  }
+?>
     </div>
     <div class="grid-item item-s-12 item-m-8 offset-m-2 item-l-6 offset-l-3">
-      <h3 class="font-size-basic js-fix-widows">We developed a suite of demos to test the different ways in which you can play and create with formOS</h3>
+<?php
+  if (!empty($front_page_options['demos_desc'])) {
+?>
+      <h3 class="font-size-basic js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['demos_desc']); ?></h3>
+<?php
+  }
+?>
     </div>
   </div>
   <div class="grid-row">

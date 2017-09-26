@@ -10,8 +10,13 @@
 <div id="section-modules" class="container margin-bottom-small">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center font-size-mid margin-bottom-basic">
-      <h2 class="js-fix-widows desktop-only">THE formOS Ignite Kit: 4 modules to start with</h2>
-      <h2 class="js-fix-widows mobile-only">THE formOS Ignite Kit: <br>4 modules to start with</h2>
+<?php
+  if (!empty($front_page_options['modules_title_text'])) {
+?>
+      <h2 class="js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['modules_title_text']); ?></h2>
+<?php
+  }
+?>
     </div>
   </div>
 

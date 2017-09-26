@@ -1,9 +1,19 @@
+<?php
+$front_page_options = get_site_option('_igv_front_page_options');
+?>
 <div id="section-how" class="container margin-bottom-mid">
+
+<?php
+if (!empty($front_page_options['how_works_title_text'])) {
+?>
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-basic">
-      <h2 class="font-size-mid js-fix-widows">How formOS works</h2>
+    <h2 class="font-size-mid js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['how_works_title_text']); ?></h2>
     </div>
   </div>
+<?php
+}
+?>
 
   <div id="how-column">
     <div class="grid-row align-items-center margin-bottom-small">
@@ -11,7 +21,13 @@
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_1.svg'); ?>
       </div>
       <div class="grid-item item-s-6">
-        <h4 class="font-size-basic">formOS game/app library</h4>
+<?php
+if (!empty($front_page_options['how_works_first_title'])) {
+?>
+        <h4 class="font-size-basic"><?php echo apply_filters('the_content', $front_page_options['how_works_first_title']); ?></h4>
+<?php
+}
+?>
       </div>
     </div>
     <div class="grid-row margin-bottom-small">
@@ -25,7 +41,13 @@
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_3.svg'); ?>
       </div>
       <div class="grid-item item-s-6">
-        <h4 class="font-size-basic">Your own device</h4>
+<?php
+if (!empty($front_page_options['how_works_second_title'])) {
+?>
+        <h4 class="font-size-basic"><?php echo apply_filters('the_content', $front_page_options['how_works_second_title']); ?></h4>
+<?php
+}
+?>
       </div>
     </div>
     <div class="grid-row margin-bottom-small">
@@ -39,6 +61,13 @@
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_5.svg'); ?>
       </div>
       <div class="grid-item item-s-6">
+<?php
+if (!empty($front_page_options['how_works_third_title'])) {
+?>
+        <h4 class="font-size-basic"><?php echo apply_filters('the_content', $front_page_options['how_works_third_title']); ?></h4>
+<?php
+}
+?>
         <h4 class="font-size-basic">formOS units</h4>
       </div>
     </div>
@@ -87,13 +116,31 @@
     </div>
     <div class="grid-row justify-between font-size-tiny text-align-center">
       <div class="grid-item how-item-large">
-        <p>App Store and Google Play – games published by formOS and third party publishers</p>
+<?php
+if (!empty($front_page_options['how_works_first_text'])) {
+?>
+        <?php echo apply_filters('the_content', $front_page_options['how_works_first_text']); ?>
+<?php
+}
+?>
       </div>
       <div class="grid-item how-item-large">
-        <p>iOS, Apple TV*, Android and Google Play*</p>
+<?php
+if (!empty($front_page_options['how_works_second_text'])) {
+?>
+        <?php echo apply_filters('the_content', $front_page_options['how_works_second_text']); ?>
+<?php
+}
+?>
       </div>
       <div class="grid-item how-item-large">
-        <p>4 units + charger in the Ignite Kit</p>
+<?php
+if (!empty($front_page_options['how_works_third_text'])) {
+?>
+        <?php echo apply_filters('the_content', $front_page_options['how_works_third_text']); ?>
+<?php
+}
+?>
       </div>
     </div>
   </div>
@@ -101,15 +148,19 @@
 </div>
 
 <?php
-$front_page_options = get_site_option('_igv_front_page_options');
-
 if (!empty($front_page_options['six_sides_video'])) {
 ?>
 
 <div class="container margin-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-small">
-      <h3 class="font-size-basic js-fix-widows">A formOS unit has 6 connecting sides</h3>
+<?php
+if (!empty($front_page_options['how_works_six_sides_title'])) {
+?>
+      <h3 class="font-size-basic js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['how_works_six_sides_title']); ?></h3>
+<?php
+}
+?>
     </div>
   </div>
   <div class="grid-row">
@@ -128,8 +179,13 @@ if (!empty($front_page_options['six_sides_video'])) {
 <div class="container margin-bottom-large">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-basic font-size-basic">
-      <h3 class="font-size-basic js-fix-widows">formOS can be connected in an infinite amount of ways</h3>
-      <h3 class="font-size-basic js-fix-widows">(here are a few basic ones)</h3>
+<?php
+if (!empty($front_page_options['how_works_six_sides_text'])) {
+?>
+      <h3 class="font-size-basic js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['how_works_six_sides_text']); ?></h3>
+<?php
+}
+?>
     </div>
   </div>
   <div id="connection-ways-icon-row" class="grid-row justify-center">
@@ -155,7 +211,13 @@ if (!empty($front_page_options['six_sides_video'])) {
       <div class="margin-bottom-tiny">
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_more.svg'); ?>
       </div>
-      <h4>And many <br>more...</h4>
+<?php
+if (!empty($front_page_options['how_works_six_sides_more_text'])) {
+?>
+      <h4><?php echo apply_filters('the_content', $front_page_options['how_works_six_sides_more_text']); ?></h4>
+<?php
+}
+?>
     </div>
   </div>
 </div>
