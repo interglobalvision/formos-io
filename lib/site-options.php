@@ -150,7 +150,7 @@ function igv_register_theme_options_metabox() {
     'name'    => esc_html__( 'Vimeo URL for video', 'cmb2' ),
     'desc'    => esc_html__( 'for what is section. (replaces local video if filled)', 'cmb2' ),
     'id'      => 'what_is_vimeo_url',
-    'type'    => 'text_small',
+    'type'    => 'text',
   ) );
 
   // COUNTDOWN

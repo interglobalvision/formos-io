@@ -14,6 +14,8 @@ Site = {
 
     $(window).resize(function(){
       _this.onResize();
+
+      _this.WhatIsVideo.onResize();
     });
 
     $(document).ready(function () {
@@ -39,6 +41,7 @@ Site = {
 };
 
 Site.WhatIsVideo = {
+  isVimeo: false,
   init: function() {
     var _this = this;
 
@@ -47,6 +50,8 @@ Site.WhatIsVideo = {
     var vimeoUrl = _this.$player.attr('data-vimeo-url');
 
     if (vimeoUrl && vimeoUrl != undefined) {
+      _this.isVimeo = true;
+
       var vimeoOptions = {
         url: vimeoUrl,
         title: false
@@ -96,10 +101,16 @@ Site.WhatIsVideo = {
     var iframeWidth = _this.$iframe.width();
     var iframeHeight = (iframeWidth / 16) * 9;
 
-    console.log(iframeWidth);
-
     _this.$iframe.css('height', iframeHeight + 'px');
-  }
+  },
+
+  onResize: function() {
+    var _this = this;
+
+    if (_this.isVimeo) {
+      _this.iframeHeight();
+    }
+  },
 };
 
 Site.Menu = {
