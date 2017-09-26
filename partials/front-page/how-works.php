@@ -8,7 +8,7 @@ if (!empty($front_page_options['how_works_title_text'])) {
 ?>
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center margin-bottom-basic">
-    <h2 class="font-size-mid js-fix-widows"><?php echo $front_page_options['how_works_title_text']; ?></h2>
+    <h2 class="font-size-mid js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['how_works_title_text']); ?></h2>
     </div>
   </div>
 <?php
@@ -24,7 +24,7 @@ if (!empty($front_page_options['how_works_title_text'])) {
 <?php
 if (!empty($front_page_options['how_works_first_title'])) {
 ?>
-        <h4 class="font-size-basic"><?php echo $front_page_options['how_works_first_title']; ?></h4>
+        <h4 class="font-size-basic"><?php echo apply_filters('the_content', $front_page_options['how_works_first_title']); ?></h4>
 <?php
 }
 ?>
@@ -44,7 +44,7 @@ if (!empty($front_page_options['how_works_first_title'])) {
 <?php
 if (!empty($front_page_options['how_works_second_title'])) {
 ?>
-        <h4 class="font-size-basic"><?php echo $front_page_options['how_works_second_title']; ?></h4>
+        <h4 class="font-size-basic"><?php echo apply_filters('the_content', $front_page_options['how_works_second_title']); ?></h4>
 <?php
 }
 ?>
@@ -64,7 +64,7 @@ if (!empty($front_page_options['how_works_second_title'])) {
 <?php
 if (!empty($front_page_options['how_works_third_title'])) {
 ?>
-        <h4 class="font-size-basic"><?php echo $front_page_options['how_works_third_title']; ?></h4>
+        <h4 class="font-size-basic"><?php echo apply_filters('the_content', $front_page_options['how_works_third_title']); ?></h4>
 <?php
 }
 ?>
@@ -119,7 +119,7 @@ if (!empty($front_page_options['how_works_third_title'])) {
 <?php
 if (!empty($front_page_options['how_works_first_text'])) {
 ?>
-        <p><?php echo $front_page_options['how_works_first_text']; ?></p>
+        <?php echo apply_filters('the_content', $front_page_options['how_works_first_text']); ?>
 <?php
 }
 ?>
@@ -128,7 +128,7 @@ if (!empty($front_page_options['how_works_first_text'])) {
 <?php
 if (!empty($front_page_options['how_works_second_text'])) {
 ?>
-        <p><?php echo $front_page_options['how_works_second_text']; ?></p>
+        <?php echo apply_filters('the_content', $front_page_options['how_works_second_text']); ?>
 <?php
 }
 ?>
@@ -137,7 +137,7 @@ if (!empty($front_page_options['how_works_second_text'])) {
 <?php
 if (!empty($front_page_options['how_works_third_text'])) {
 ?>
-        <p><?php echo $front_page_options['how_works_third_text']; ?></p>
+        <?php echo apply_filters('the_content', $front_page_options['how_works_third_text']); ?>
 <?php
 }
 ?>
@@ -157,7 +157,7 @@ if (!empty($front_page_options['six_sides_video'])) {
 <?php
 if (!empty($front_page_options['how_works_six_sides_title'])) {
 ?>
-      <h3 class="font-size-basic js-fix-widows"><?php echo $front_page_options['how_works_six_sides_title']; ?></h3>
+      <h3 class="font-size-basic js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['how_works_six_sides_title']); ?></h3>
 <?php
 }
 ?>
@@ -182,11 +182,10 @@ if (!empty($front_page_options['how_works_six_sides_title'])) {
 <?php
 if (!empty($front_page_options['how_works_six_sides_text'])) {
 ?>
-      <h3 class="font-size-basic js-fix-widows"><?php echo $front_page_options['how_works_six_sides_text']; ?></h3>
+      <h3 class="font-size-basic js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['how_works_six_sides_text']); ?></h3>
 <?php
 }
 ?>
-      <h3 class="font-size-basic js-fix-widows">(here are a few basic ones)</h3>
     </div>
   </div>
   <div id="connection-ways-icon-row" class="grid-row justify-center">
@@ -212,7 +211,13 @@ if (!empty($front_page_options['how_works_six_sides_text'])) {
       <div class="margin-bottom-tiny">
         <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_icon_more.svg'); ?>
       </div>
-      <h4>And many <br>more...</h4>
+<?php
+if (!empty($front_page_options['how_works_six_sides_more_text'])) {
+?>
+      <h4><?php echo apply_filters('the_content', $front_page_options['how_works_six_sides_more_text']); ?></h4>
+<?php
+}
+?>
     </div>
   </div>
 </div>

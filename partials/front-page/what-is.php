@@ -8,14 +8,14 @@ $front_page_options = get_site_option('_igv_front_page_options');
 <?php
 if (!empty($front_page_options['what_is_title_text'])) {
 ?>
-      <h2 class="font-size-mid margin-bottom-small js-fix-widows"><?php echo $front_page_options['what_is_title_text']; ?></h2>
+      <h2 class="font-size-mid margin-bottom-small js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['what_is_title_text']); ?></h2>
 <?php
 }
 
 if (!empty($front_page_options['what_is_first_text'])) {
 ?>
 
-      <h3 class="font-size-basic js-fix-widows"><?php echo $front_page_options['what_is_first_text']; ?></h3>
+      <h3 class="font-size-basic js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['what_is_first_text']); ?></h3>
 <?php
 }
 ?>
@@ -33,7 +33,7 @@ if (!empty($front_page_options['what_is_first_text'])) {
 <?php
   if (!empty($front_page_options['what_is_video_text'])) {
 ?>
-  <h2 class="font-size-basic margin-bottom-basic js-fix-widows"><?php echo $front_page_options['what_is_video_text']; ?></h2>
+  <h2 class="font-size-basic margin-bottom-basic js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['what_is_video_text']); ?></h2>
 <?php
   }
 ?>

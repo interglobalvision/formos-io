@@ -17,7 +17,7 @@ $front_page_options = get_site_option('_igv_front_page_options');
 if (!empty($front_page_options['splash_title_text'])) {
 
 ?>
-        <h2 class="font-size-extra color-blue js-fix-widows line-tighter"><?php echo $front_page_options['splash_title_text']; ?></h2>
+        <h2 class="font-size-extra color-blue js-fix-widows line-tighter"><?php echo apply_filters('the_content', $front_page_options['splash_title_text']); ?></h2>
 <?php
 }
 ?>
