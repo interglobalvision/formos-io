@@ -14,6 +14,8 @@ Site = {
 
     $(window).resize(function(){
       _this.onResize();
+
+      _this.WhatIsVideo.onResize();
     });
 
     $(document).ready(function () {
@@ -39,13 +41,30 @@ Site = {
 };
 
 Site.WhatIsVideo = {
-  $player: $('#what-is-video-player'),
-  $video: $('#what-is-video'),
-
+  isVimeo: false,
   init: function() {
     var _this = this;
 
-    _this.$player.on('click', _this.handleClick.bind(_this));
+    _this.$player = $('#what-is-video-player');
+
+    var vimeoUrl = _this.$player.attr('data-vimeo-url');
+
+    if (vimeoUrl && vimeoUrl != undefined) {
+      _this.isVimeo = true;
+
+      var vimeoOptions = {
+        url: vimeoUrl,
+        title: false
+      };
+
+      _this.$vimeo = new Vimeo.Player('what-is-video-player', vimeoOptions);
+
+      _this.handleVimeo();
+    } else {
+      _this.$video = $('#what-is-video');
+
+      _this.$player.on('click', _this.handleClick.bind(_this));
+    }
   },
 
   handleClick: function() {
@@ -57,7 +76,39 @@ Site.WhatIsVideo = {
     } else {
       _this.$video[0].play();
       _this.$player.addClass('playing');
+    }
+  },
 
+  handleVimeo: function() {
+    var _this = this;
+
+    _this.$vimeo.on('loaded', function() {
+      _this.$iframe = _this.$player.find('iframe');
+      _this.iframeHeight();
+    });
+
+    _this.$vimeo.on('play', function() {
+      _this.$player.addClass('playing');
+    });
+
+    _this.$vimeo.on('pause', function() {
+      _this.$player.removeClass('playing');
+    });
+  },
+
+  iframeHeight: function() {
+    var _this = this;
+    var iframeWidth = _this.$iframe.width();
+    var iframeHeight = (iframeWidth / 16) * 9;
+
+    _this.$iframe.css('height', iframeHeight + 'px');
+  },
+
+  onResize: function() {
+    var _this = this;
+
+    if (_this.isVimeo) {
+      _this.iframeHeight();
     }
   },
 };

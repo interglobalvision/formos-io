@@ -100,24 +100,30 @@ html, body
   position: relative
   transform: scale(.98)
   transition: all $transition-speed-fast
+  box-shadow: 0 4px 8px 0 $color-gray-transparent
+  border-radius: 8px
+  border: 1px solid $color-gray
+  overflow: hidden
+  font-size: 0
 
   &:hover
+    box-shadow: 0 7px 14px 0 $color-gray-transparent
     transform: scale(1)
 
     #what-is-video-play-button-svg
       circle
         fill: $color-black
         transition: all $transition-speed-fast
-    #what-is-video
-      box-shadow: 0 7px 14px 0 $color-gray-transparent
 
   &.playing
     transform: scale(1)
+    box-shadow: 0 7px 14px 0 $color-gray-transparent
 
     #what-is-video-play-trigger
       display: none
-    #what-is-video
-      box-shadow: 0 7px 14px 0 $color-gray-transparent
+
+  iframe
+    width: 100%
 
 #what-is-video-play-trigger
   position: absolute
@@ -126,18 +132,13 @@ html, body
   bottom: 0
   right: 0
   z-index: 10
+  cursor: pointer
 
 #what-is-video-play-button-svg
   height: 30%
   width: 30%
   circle
     fill: $color-gray
-
-#what-is-video
-  box-shadow: 0 4px 8px 0 $color-gray-transparent
-  border-radius: 8px
-  border: 1px solid $color-gray
-  transition: all $transition-speed
 
 // SPLASH
 
