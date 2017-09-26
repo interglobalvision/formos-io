@@ -109,7 +109,7 @@ html, body
         fill: $color-black
         transition: all $transition-speed-fast
     #what-is-video
-      box-shadow: 0px 7px 14px 0px $color-gray-transparent
+      box-shadow: 0 7px 14px 0 $color-gray-transparent
 
   &.playing
     transform: scale(1)
@@ -117,7 +117,7 @@ html, body
     #what-is-video-play-trigger
       display: none
     #what-is-video
-      box-shadow: 0px 7px 14px 0px $color-gray-transparent
+      box-shadow: 0 7px 14px 0 $color-gray-transparent
 
 #what-is-video-play-trigger
   position: absolute
@@ -134,7 +134,7 @@ html, body
     fill: $color-gray
 
 #what-is-video
-  box-shadow: 0px 4px 8px 0px $color-gray-transparent
+  box-shadow: 0 4px 8px 0 $color-gray-transparent
   border-radius: 8px
   border: 1px solid $color-gray
   transition: all $transition-speed
@@ -220,3 +220,7 @@ html, body
     margin-top: $margin-basic
   li
     margin-bottom: .5em
+
+.module-item
+  flex-basis: 100%
+  max-width: 100%
