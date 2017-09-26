@@ -186,6 +186,8 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+
+   // How it works
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'First text', 'cmb2' ),
     'desc'    => esc_html__( 'Ex. "App Store and Google Play – games published by formOS and third party publishers"', 'cmb2' ),
@@ -312,8 +314,46 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  $central_module_group = $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Central Module', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'central_module',
+    'type'    => 'group',
+    'repeatable' => false
+  ) );
+
+  $front_page_options->add_group_field($central_module_group, array(
+    'name'    => esc_html__( 'Name', 'cmb2' ),
+    'id'      => 'module_name',
+    'type'    => 'text',
+  ) );
+
+  $front_page_options->add_group_field($central_module_group, array(
+    'name'    => esc_html__( 'Description', 'cmb2' ),
+    'id'      => 'module_desc',
+    'type'    => 'textarea_small',
+  ) );
+
+  $front_page_options->add_group_field($central_module_group, array(
+    'name'    => esc_html__( 'Specs', 'cmb2' ),
+    'id'      => 'module_specs',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+    ),
+  ) );
+
+  $front_page_options->add_group_field($central_module_group, array(
+    'name'    => esc_html__( 'Image', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'module_image',
+    'type'    => 'file',
+    'preview_size' => 'medium'
+  ) );
+
   $modules_group = $front_page_options->add_field( array(
-    'name'    => esc_html__( '', 'cmb2' ),
+    'name'    => esc_html__( 'System Modules', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
     'id'      => 'modules',
     'type'    => 'group',
@@ -347,8 +387,8 @@ function igv_register_theme_options_metabox() {
     'id'      => 'module_specs',
     'type'    => 'wysiwyg',
     'options' => array(
-      'textarea_rows' => 5,
-      'media_buttons' => false,
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
       'teeny' => true,
     ),
   ) );
@@ -358,6 +398,7 @@ function igv_register_theme_options_metabox() {
     'desc'    => esc_html__( '', 'cmb2' ),
     'id'      => 'module_image',
     'type'    => 'file',
+    'preview_size' => 'medium'
   ) );
 
   // DEMOS

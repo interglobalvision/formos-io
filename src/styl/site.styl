@@ -204,9 +204,9 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
   $margin-large = ($gutter * 5)
 
   $font-size-basic = 21px
-  $font-size-extra = 36px
-  $font-size-large = 30px
-  $font-size-mid = 27px
+  $font-size-extra = 30px
+  $font-size-large = 27px
+  $font-size-mid = 24px
   $font-size-small = 14px
   $font-size-tiny = 14px
 
@@ -229,9 +229,18 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
   $margin-mid = ($gutter * 3.5)
   $margin-large = ($gutter * 5)
 
+  $font-size-basic = 21px
+  $font-size-extra = 36px
+  $font-size-large = 30px
+  $font-size-mid = 27px
+  $font-size-small = 14px
+  $font-size-tiny = 14px
+
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
   grid(1300px, $gutter, xl)
+
+  font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny)
 
   @import 'responsive/desktop'
 
