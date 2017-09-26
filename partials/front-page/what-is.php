@@ -24,7 +24,7 @@ if (!empty($front_page_options['what_is_first_text'])) {
 </div>
 
 <?php
-  if (!empty($front_page_options['what_is_video'])) {
+  if (!empty($front_page_options['what_is_video']) || !empty($front_page_options['what_is_vimeo_id'])) {
 ?>
 
 <div class="container margin-bottom-mid">
@@ -33,17 +33,23 @@ if (!empty($front_page_options['what_is_first_text'])) {
 <?php
   if (!empty($front_page_options['what_is_video_text'])) {
 ?>
-  <h2 class="font-size-basic margin-bottom-basic js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['what_is_video_text']); ?></h2>
+      <h2 class="font-size-basic margin-bottom-basic js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['what_is_video_text']); ?></h2>
 <?php
   }
 ?>
-      <div id="what-is-video-player" class="u-pointer">
+      <div id="what-is-video-player" class="u-pointer" <?php echo !empty($front_page_options['what_is_vimeo_url']) ? 'data-vimeo-url="' . $front_page_options['what_is_vimeo_url'] . '"' : ''; ?>>
+<?php
+    if (empty($front_page_options['what_is_vimeo_url']) && !empty($front_page_options['what_is_video'])) {
+?>
         <nav id="what-is-video-play-trigger" class="u-flex-center">
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/play_button.svg'); ?>
         </nav>
-        <video id="what-is-video" preload width="100%" muted loop>
+        <video id="what-is-video" preload width="100%" <?php echo !empty($front_page_options['what_is_video_poster']) ? 'poster="' . $front_page_options['what_is_video_poster'] . '"' : ''; ?>>
           <source src="<?php echo $front_page_options['what_is_video'];?>" type="video/mp4">
         </video>
+<?php
+    }
+?>
       </div>
     </div>
   </div>
