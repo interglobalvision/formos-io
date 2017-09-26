@@ -139,6 +139,20 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Preview image for video', 'cmb2' ),
+    'desc'    => esc_html__( 'for what is section', 'cmb2' ),
+    'id'      => 'what_is_video_poster',
+    'type'    => 'file',
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Vimeo URL for video', 'cmb2' ),
+    'desc'    => esc_html__( 'for what is section. (replaces local video if filled)', 'cmb2' ),
+    'id'      => 'what_is_vimeo_url',
+    'type'    => 'text_small',
+  ) );
+
   // COUNTDOWN
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'Countdown', 'cmb2' ),
