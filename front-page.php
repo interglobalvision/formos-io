@@ -27,7 +27,7 @@ if (!empty($front_page_options['splash_title_text'])) {
   </div>
 
 
-  <div class="container margin-bottom-mid text-align-center">
+  <div class="container margin-bottom-small text-align-center">
 <?php
 
 if (!empty($front_page_options['btf_title_text'])) {
@@ -62,6 +62,8 @@ if (!empty($front_page_options['btf_first_text'])) {
   <?php get_template_part('partials/front-page/modules'); ?>
 
   <?php get_template_part('partials/front-page/demos'); ?>
+
+  <?php get_template_part('partials/front-page/early_testers'); ?>
 
   <?php get_template_part('partials/front-page/email-signup'); ?>
 
