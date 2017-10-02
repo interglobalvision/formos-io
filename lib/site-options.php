@@ -574,4 +574,167 @@ function igv_register_theme_options_metabox() {
     'id'      => 'google_analytics_id',
     'type'    => 'text',
   ) );
+
+  // EARLY TESTERS
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Early testers', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_title',
+    'type'    => 'title',
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Early testers title', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_title_text',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'textarea_rows' => 3,
+      'media_buttons' => false,
+      'teeny' => true,
+    ),
+  ) );
+
+  // early_testers testimonials
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Desc', 'cmb2' ),
+    'id'      => 'early_testers_desc',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+      'teeny' => true,
+    ),
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Image', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_image',
+    'type'    => 'file',
+    'preview_size' => 'medium'
+  ) );
+
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Desc2', 'cmb2' ),
+    'id'      => 'early_testers_desc2',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+      'teeny' => true,
+    ),
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Image2', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_image2',
+    'type'    => 'file',
+    'preview_size' => 'medium'
+  ) );
+  
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Desc3', 'cmb2' ),
+    'id'      => 'early_testers_desc3',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+      'teeny' => true,
+    ),
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Image3', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_image3',
+    'type'    => 'file',
+    'preview_size' => 'medium'
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Desc4', 'cmb2' ),
+    'id'      => 'early_testers_desc4',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+      'teeny' => true,
+    ),
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Image4', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_image4',
+    'type'    => 'file',
+    'preview_size' => 'medium'
+  ) );
+
+
+
+
+
+  // early_testers video
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Early testers video text', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "See formOS in action:"', 'cmb2' ),
+    'id'      => 'early_testers_video_text',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'textarea_rows' => 3,
+      'media_buttons' => false,
+      'teeny' => true,
+    ),
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'video desc', 'cmb2' ),
+    'desc'    => esc_html__( 'Ex. "What early testers are saying"', 'cmb2' ),
+    'id'      => 'early_testers_video_desc',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'textarea_rows' => 3,
+      'media_buttons' => false,
+      'teeny' => true,
+    ),
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Early testers video', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_video_mp4',
+    'type'    => 'file',
+    'query_args' => array(
+      'type' => 'video/mp4',
+    ),
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Preview image for video', 'cmb2' ),
+    'desc'    => esc_html__( 'for what is section', 'cmb2' ),
+    'id'      => 'early_testers_video_poster',
+    'type'    => 'file',
+  ) );
+
+
+
+
+
 }
+
+
+
+
