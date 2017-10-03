@@ -25,7 +25,7 @@
     foreach ($front_page_options['early_testers_testimonials'] as $testimonial) {
       if (!empty($testimonial['image']) && !empty($testimonial['quote'])) {
 ?>
-    <div class="grid-item item-s-12 item-m-3 text-align-center">
+    <div class="grid-item item-s-6 item-l-3 text-align-center">
       <div class="grid-item item-s-10">
         <?php echo wp_get_attachment_image($testimonial['image_id'], 'item-l-3'); ?>
       </div>
