@@ -4,7 +4,7 @@
   if (!empty($front_page_options['early_testers_title_text'])) {
 ?>
 
-<div id="section-early_testers" class="container margin-bottom-small">
+<div id="section-early-testers" class="container margin-bottom-small">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center font-size-mid margin-bottom-basic">
 <?php
