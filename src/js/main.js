@@ -12,11 +12,11 @@ Site = {
      _this.Menu.init();
      _this.Countdown.init();
 
+
     $(window).resize(function(){
       _this.onResize();
-
-      _this.InlineVideo.onResize();
       _this.videoWrapper();
+      _this.InlineVideo.onResize();
     });
 
     $(document).ready(function () {
@@ -41,24 +41,29 @@ Site = {
   },
 
   videoWrapper: function() {
-    $('.wrapped-video').on('loadeddata', function() {
-      $(this).css('width', 'auto');
-
-      var ratio = $(this).width() / $(this).height();
-
-      console.log(ratio);
-
+    $('.wrapped-video').each(function() {
+      var ratio = .65773447;
       var $wrapper = $(this).parent('.video-wrapper');
 
       if ($(this).hasClass('splash-video')) {
         var windowHeight = $(window).height();
         var headerHeight = $('.header:visible').outerHeight();
-        var height = $(this).css('height', windowHeight - headerHeight).height();
+        var height = $(this).css('height', windowHeight - headerHeight + 'px').height();
       } else {
         var height = $(this).height();
       }
 
-      $wrapper.css('width', (height * ratio) - 1);
+      $wrapper.css({
+        'width': (height * ratio) - 5 + 'px',
+        'height': height - 5 + 'px'
+      });
+
+      $(this).css({
+        'position': 'absolute',
+        'top': 0,
+        'left': '50%',
+        'margin-left': -($(this).width() / 2) + 'px',
+      })
     });
   },
 };
