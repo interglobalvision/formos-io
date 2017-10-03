@@ -600,7 +600,7 @@ function igv_register_theme_options_metabox() {
   // EARLY TESTERS TESTIMONIALS
 
   $early_testers_group = $front_page_options->add_field( array(
-    'name'    => esc_html__( 'Testimonial', 'cmb2' ),
+    'name'    => esc_html__( 'Testimonials', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
     'id'      => 'early_testers_testimonials',
     'type'    => 'group',
@@ -614,7 +614,7 @@ function igv_register_theme_options_metabox() {
 
   $front_page_options->add_group_field($early_testers_group, array(
     'name'    => esc_html__( 'Quote', 'cmb2' ),
-    'id'      => 'desc',
+    'id'      => 'quote',
     'type'    => 'wysiwyg',
     'options' => array(
       'media_buttons' => false, // show insert/upload button(s)
