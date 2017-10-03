@@ -1,84 +1,56 @@
 <?php
   $front_page_options = get_site_option('_igv_front_page_options');
-
-  if (!empty($front_page_options['early_testers_title_text'])) {
 ?>
 
 <div id="section-early-testers" class="container margin-bottom-small">
-  <div class="grid-row">
-    <div class="grid-item item-s-12 text-align-center font-size-mid margin-bottom-basic">
 <?php
   if (!empty($front_page_options['early_testers_title_text'])) {
 ?>
+  <div class="grid-row">
+    <div class="grid-item item-s-12 text-align-center font-size-mid margin-bottom-basic">
+
       <h2 class="js-fix-widows"><?php echo apply_filters('the_content', $front_page_options['early_testers_title_text']); ?></h2>
+
+    </div>
+  </div>
 <?php
   }
 ?>
-    </div>
-  </div>
 
+<?php
+  if (!empty($front_page_options['early_testers'])) {
+?>
   <div class="grid-row justify-center">
-
+<?php
+    foreach ($front_page_options['early_testers'] as $tester) {
+      if (!empty($tester['image']) && !empty($tester['desc'])) {
+?>
     <div class="grid-item item-s-12 item-m-3 text-align-center">
       <div class="grid-item item-s-10">
-        <?php echo wp_get_attachment_image($front_page_options['early_testers_image_id'], 'item-l-3'); ?>
+        <?php echo wp_get_attachment_image($tester['image_id'], 'item-l-3'); ?>
       </div>
       <div class="">
         <div class="font-size-small margin-bottom-small">
           <br>
           <h3 class="font-size-basic js-fix-widows">
-            <?php echo apply_filters('the_content', $front_page_options['early_testers_desc']); ?>
+            <?php echo apply_filters('the_content', $tester['desc']); ?>
           </h3>
         </div>
       </div>
     </div>
-
-    <div class="grid-item item-s-12 item-m-3 text-align-center">
-      <div class="grid-item item-s-10">
-        <?php echo wp_get_attachment_image($front_page_options['early_testers_image2_id'], 'item-l-3'); ?>
-      </div>
-      <div class="">
-        <div class="font-size-small margin-bottom-small">
-          <br>
-          <h3 class="font-size-basic js-fix-widows">
-            <?php echo apply_filters('the_content', $front_page_options['early_testers_desc2']); ?>
-          </h3>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="grid-item item-s-12 item-m-3 text-align-center">
-      <div class="grid-item item-s-10">
-        <?php echo wp_get_attachment_image($front_page_options['early_testers_image3_id'], 'item-l-3'); ?>
-      </div>
-      <div class="">
-        <div class="font-size-small margin-bottom-small">
-          <br>
-          <h3 class="font-size-basic js-fix-widows">
-            <?php echo apply_filters('the_content', $front_page_options['early_testers_desc3']); ?>
-          </h3>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="grid-item item-s-12 item-m-3 text-align-center">
-      <div class="grid-item item-s-10">
-        <?php echo wp_get_attachment_image($front_page_options['early_testers_image4_id'], 'item-l-3'); ?>
-      </div>
-      <div class="">
-        <div class="font-size-small margin-bottom-small">
-          <br>
-          <h3 class="font-size-basic js-fix-widows">
-            <?php echo apply_filters('the_content', $front_page_options['early_testers_desc4']); ?>
-          </h3>
-        </div>
-      </div>
-    </div>
-
+<?php
+      }
+    }
+?>
   </div>
+<?php
+  }
+?>
 
+
+<?php
+  if (!empty($front_page_options['early_testers_video_text']) && !empty($front_page_options['early_testers_video_desc']) && !empty($front_page_options['early_testers_video_mp4'])) {
+?>
   <div class="grid-row">
     <div class="grid-item item-s-12 item-m-10 offset-m-1 item-l-8 offset-l-2">
       <h2 class="font-size-extra color-blue font-uppercase js-fix-widows text-align-center">
@@ -100,16 +72,11 @@
           <source src="<?php echo $front_page_options['early_testers_video_mp4'];?>" type="video/mp4">
         </video>
 
-
       </div>
     </div>
   </div>
+<?php
+  }
+?>
 
 </div>
-
-
-
-
-<?php
-      }
-?>
