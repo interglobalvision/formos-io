@@ -22,6 +22,8 @@ Site = {
       _this.InlineVideo.init();
     });
 
+    _this.videoWrapper();
+
   },
 
   onResize: function() {
@@ -36,6 +38,13 @@ Site = {
       var string = $(this).html();
       string = string.replace(/ ([^ ]*)$/,'&nbsp;$1');
       $(this).html(string);
+    });
+  },
+
+  videoWrapper: function() {
+    // SPLASH VIDEO SIZE
+    $('.wrapped-video').on('loadedmetadata', function() {
+      debugger;
     });
   },
 };
