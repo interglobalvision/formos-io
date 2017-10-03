@@ -86,5 +86,3 @@
     </section>
 
   </header>
-
-<div class="spacer"></div>
