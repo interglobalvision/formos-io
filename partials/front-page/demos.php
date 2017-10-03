@@ -8,7 +8,7 @@
 
   if ($demos->have_posts()) {
 ?>
-<div id="section-demos" class="container margin-bottom-mid">
+<div id="section-demos" class="container margin-bottom-basic">
   <div class="grid-row margin-bottom-basic text-align-center">
     <div class="grid-item item-s-12">
 <?php

@@ -2,7 +2,7 @@
   $front_page_options = get_site_option('_igv_front_page_options');
 ?>
 
-<div id="section-early-testers" class="container margin-bottom-small">
+<div id="section-early-testers" class="container margin-bottom-basic">
 <?php
   if (!empty($front_page_options['early_testers_title_text'])) {
 ?>

@@ -61,9 +61,9 @@ if (!empty($front_page_options['btf_first_text'])) {
 
   <?php get_template_part('partials/front-page/modules'); ?>
 
-  <?php get_template_part('partials/front-page/demos'); ?>
-
   <?php get_template_part('partials/front-page/early-testers'); ?>
+
+  <?php get_template_part('partials/front-page/demos'); ?>
 
   <?php get_template_part('partials/front-page/email-signup'); ?>
 
