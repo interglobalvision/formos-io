@@ -129,6 +129,8 @@ Site.Menu = {
       var isMobile = $(this).hasClass('mobile-scrollto');
       var headerOffset = _this.getHeaderOffset(isMobile);
 
+      console.log('click');
+
       _this.scrollTo(section, headerOffset);
     });
 
