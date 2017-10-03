@@ -18,22 +18,22 @@
 ?>
 
 <?php
-  if (!empty($front_page_options['early_testers'])) {
+  if (!empty($front_page_options['early_testers_testimonials'])) {
 ?>
   <div class="grid-row justify-center">
 <?php
-    foreach ($front_page_options['early_testers'] as $tester) {
-      if (!empty($tester['image']) && !empty($tester['desc'])) {
+    foreach ($front_page_options['early_testers_testimonials'] as $testimonial) {
+      if (!empty($testimonial['image']) && !empty($testimonial['quote'])) {
 ?>
     <div class="grid-item item-s-12 item-m-3 text-align-center">
       <div class="grid-item item-s-10">
-        <?php echo wp_get_attachment_image($tester['image_id'], 'item-l-3'); ?>
+        <?php echo wp_get_attachment_image($testimonial['image_id'], 'item-l-3'); ?>
       </div>
       <div class="">
         <div class="font-size-small margin-bottom-small">
           <br>
           <h3 class="font-size-basic js-fix-widows">
-            <?php echo apply_filters('the_content', $tester['desc']); ?>
+            <?php echo apply_filters('the_content', $testimonial['quote']); ?>
           </h3>
         </div>
       </div>
