@@ -7,7 +7,7 @@
     $system_modules = $front_page_options['modules'];
 ?>
 
-<div id="section-modules" class="container margin-bottom-small">
+<div id="section-modules" class="container margin-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center font-size-mid margin-bottom-basic">
 <?php
