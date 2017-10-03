@@ -16,14 +16,13 @@ Site = {
       _this.onResize();
 
       _this.InlineVideo.onResize();
+      _this.videoWrapper();
     });
 
     $(document).ready(function () {
+      _this.videoWrapper();
       _this.InlineVideo.init();
     });
-
-    _this.videoWrapper();
-
   },
 
   onResize: function() {
@@ -42,9 +41,21 @@ Site = {
   },
 
   videoWrapper: function() {
-    // SPLASH VIDEO SIZE
-    $('.wrapped-video').on('loadedmetadata', function() {
-      debugger;
+    $('.wrapped-video').each(function() {
+      $(this).css('width', 'auto');
+
+      var ratio = $(this).width() / $(this).height();
+      var $wrapper = $(this).parent('.video-wrapper');
+
+      if ($(this).hasClass('splash-video')) {
+        var windowHeight = $(window).height();
+        var headerHeight = $('.header:visible').outerHeight();
+        var height = $(this).css('height', windowHeight - headerHeight).height();
+      } else {
+        var height = $(this).height();
+      }
+
+      $wrapper.css('width', (height * ratio) - 1);
     });
   },
 };
