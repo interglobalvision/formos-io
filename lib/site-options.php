@@ -597,24 +597,10 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
-  // EARLY TESTERS TESTIMONIALS
-
-  $early_testers_group = $front_page_options->add_field( array(
-    'name'    => esc_html__( 'Testimonials', 'cmb2' ),
-    'desc'    => esc_html__( '', 'cmb2' ),
-    'id'      => 'early_testers_testimonials',
-    'type'    => 'group',
-    'options' => array(
-      'group_title'   => __( 'Testimonial {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
-      'add_button'    => __( 'Add Another Testimonial', 'cmb2' ),
-      'remove_button' => __( 'Remove Testimonial', 'cmb2' ),
-      'sortable'      => true, // beta
-    ),
-  ) );
-
-  $front_page_options->add_group_field($early_testers_group, array(
-    'name'    => esc_html__( 'Quote', 'cmb2' ),
-    'id'      => 'quote',
+  // early_testers testimonials
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Desc', 'cmb2' ),
+    'id'      => 'early_testers_desc',
     'type'    => 'wysiwyg',
     'options' => array(
       'media_buttons' => false, // show insert/upload button(s)
@@ -623,16 +609,82 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
-  $front_page_options->add_group_field($early_testers_group, array(
+  $front_page_options->add_field( array(
     'name'    => esc_html__( 'Image', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
-    'id'      => 'image',
+    'id'      => 'early_testers_image',
     'type'    => 'file',
-    'preview_size' => array( 100, 100 ),
+    'preview_size' => 'medium'
   ) );
 
-  // EARLY TESTERS VIDEO
 
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Desc2', 'cmb2' ),
+    'id'      => 'early_testers_desc2',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+      'teeny' => true,
+    ),
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Image2', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_image2',
+    'type'    => 'file',
+    'preview_size' => 'medium'
+  ) );
+  
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Desc3', 'cmb2' ),
+    'id'      => 'early_testers_desc3',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+      'teeny' => true,
+    ),
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Image3', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_image3',
+    'type'    => 'file',
+    'preview_size' => 'medium'
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Desc4', 'cmb2' ),
+    'id'      => 'early_testers_desc4',
+    'type'    => 'wysiwyg',
+    'options' => array(
+      'media_buttons' => false, // show insert/upload button(s)
+      'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+      'teeny' => true,
+    ),
+  ) );
+
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Image4', 'cmb2' ),
+    'desc'    => esc_html__( '', 'cmb2' ),
+    'id'      => 'early_testers_image4',
+    'type'    => 'file',
+    'preview_size' => 'medium'
+  ) );
+
+
+
+
+
+  // early_testers video
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'Early testers video text', 'cmb2' ),
     'desc'    => esc_html__( 'Ex. "See formOS in action:"', 'cmb2' ),
@@ -644,6 +696,7 @@ function igv_register_theme_options_metabox() {
       'teeny' => true,
     ),
   ) );
+
 
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'video desc', 'cmb2' ),
@@ -657,6 +710,7 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'Early testers video', 'cmb2' ),
     'desc'    => esc_html__( '', 'cmb2' ),
@@ -667,6 +721,7 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'Preview image for video', 'cmb2' ),
     'desc'    => esc_html__( 'for what is section', 'cmb2' ),
@@ -674,4 +729,12 @@ function igv_register_theme_options_metabox() {
     'type'    => 'file',
   ) );
 
+
+
+
+
 }
+
+
+
+
