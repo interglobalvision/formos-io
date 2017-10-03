@@ -65,18 +65,22 @@ Site = {
         var height = $(this).height();
       }
 
+      var width = (height * ratio);
+      var marginTop = -(height / 2);
+      var marginLeft = -((height * ratio) / 2);
+
       // set height and width of wrapper - 5px
       $wrapper.css({
-        'width': (height * ratio) - 5 + 'px',
+        'width': width - 5 + 'px',
         'height': height - 5 + 'px'
       });
 
       // set height and width of video, set margins for absolute centering
       $(this).addClass('show').css({
-        'width': (height * ratio) + 'px',
+        'width': width + 'px',
         'height': height + 'px',
-        'margin-top': -(height / 2) + 'px',
-        'margin-left': -((height * ratio) / 2) + 'px',
+        'margin-top': marginTop + 'px',
+        'margin-left': marginLeft + 'px',
       });
     });
   },
