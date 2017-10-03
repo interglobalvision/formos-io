@@ -31,7 +31,7 @@
     <div class="grid-row align-items-center">
       <div class="grid-item item-m-1 item-l-2">
         <h1 class="u-hidden"><?php bloginfo('name'); ?></h1>
-        <div id="header-logo-holder">
+        <div id="header-logo-holder" class="js-scrollto" data-scroll="top">
           <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
         </div>
       </div>
@@ -65,7 +65,7 @@
         </div>
         <div class="grid-item item-s-4">
           <h1 class="u-hidden"><?php bloginfo('name'); ?></h1>
-          <div id="mobile-header-logo-holder" class="text-align-center">
+          <div id="mobile-header-logo-holder" class="text-align-center js-scrollto" data-scroll="top">
             <?php echo url_get_contents(get_template_directory_uri() . '/dist/img/formos_logo.svg'); ?>
           </div>
         </div>

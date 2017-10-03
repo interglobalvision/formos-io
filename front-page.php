@@ -4,6 +4,8 @@ get_header();
 
 <main id="main-content">
 
+  <div id="section-top"></div>
+
   <?php get_template_part('partials/front-page/splash-video'); ?>
 
   <div id="splash" class="container margin-bottom-basic">
