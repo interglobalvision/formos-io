@@ -68,7 +68,6 @@ if (!empty($front_page_options['how_works_third_title'])) {
 <?php
 }
 ?>
-        <h4 class="font-size-basic">formOS units</h4>
       </div>
     </div>
   </div>
@@ -105,13 +104,13 @@ if (!empty($front_page_options['how_works_third_title'])) {
     </div>
     <div class="grid-row justify-between font-size-small text-align-center">
       <div class="grid-item how-item-large">
-        <h4 class="margin-bottom-tiny">formOS game/app library</h4>
+        <h4 class="margin-bottom-tiny"><?php echo !empty($front_page_options['how_works_first_title']) ? apply_filters('the_content', $front_page_options['how_works_first_title']) : ''; ?></h4>
       </div>
       <div class="grid-item how-item-large">
-        <h4 class="margin-bottom-tiny">Your own device</h4>
+        <h4 class="margin-bottom-tiny"><?php echo !empty($front_page_options['how_works_second_title']) ? apply_filters('the_content', $front_page_options['how_works_second_title']) : ''; ?></h4>
       </div>
       <div class="grid-item how-item-large">
-        <h4 class="margin-bottom-tiny">formOS units</h4>
+        <h4 class="margin-bottom-tiny"><?php echo !empty($front_page_options['how_works_third_title']) ? apply_filters('the_content', $front_page_options['how_works_third_title']) : ''; ?></h4>
       </div>
     </div>
     <div class="grid-row justify-between font-size-tiny text-align-center">
