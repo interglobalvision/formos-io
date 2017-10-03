@@ -42,8 +42,8 @@ Site = {
 
   videoWrapper: function() {
     $('.wrapped-video').each(function() {
-      var ratio = .65773447;
       var $wrapper = $(this).parent('.video-wrapper');
+      var ratio = $(this).attr('data-ratio');
 
       if ($(this).hasClass('splash-video')) {
         var windowHeight = $(window).height();
@@ -58,12 +58,12 @@ Site = {
         'height': height - 5 + 'px'
       });
 
-      $(this).css({
-        'position': 'absolute',
-        'top': 0,
-        'left': '50%',
-        'margin-left': -($(this).width() / 2) + 'px',
-      })
+      $(this).addClass('show').css({
+        'width': (height * ratio) + 'px',
+        'height': height + 'px',
+        'margin-top': -(height / 2) + 'px',
+        'margin-left': -((height * ratio) / 2) + 'px',
+      });
     });
   },
 };

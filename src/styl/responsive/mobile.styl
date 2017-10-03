@@ -20,6 +20,14 @@ html, body
 video
   background-color: $color-blue
 
+.wrapped-video
+  visibility: hidden
+  &.show
+    position: absolute
+    top: 50%
+    left: 50%
+    visibility: visible
+
 .video-wrapper
   position: relative
   overflow: hidden
