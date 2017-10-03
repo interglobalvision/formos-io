@@ -63,7 +63,7 @@
 
     <div class="grid-item item-s-12 item-l-9">
       <h2 class="text-align-center margin-bottom-small color-blue font-uppercase font-size-tiny">System Modules</h2>
-      <div class="grid-row margin-bottom-basic justify-center">
+      <div id="system-modules-row" class="grid-row margin-bottom-basic justify-center">
 <?php
     foreach($system_modules as $index => $module) {
       if (!empty($module['module_name']) && !empty($module['module_image_id'])) {
