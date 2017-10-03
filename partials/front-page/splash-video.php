@@ -8,7 +8,7 @@ if (!empty($front_page_options['splash_video_mp4'])) {
 <div id="splash-video-container">
   <div class="grid-row">
     <div class="grid-item item-s-12 no-gutter">
-      <video id="splash-video-1" class="splash-video" autoplay preload width="100%" muted>
+      <video id="splash-video-1" class="splash-video" autoplay preload width="100%" muted playsinline>
         <source src="<?php echo $front_page_options['splash_video_mp4'];?>" type="video/mp4">
        </video>
     </div>
