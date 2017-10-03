@@ -1,12 +1,15 @@
-$header-height = 49px
+$header-height = 54px
 
 #header
+  position: fixed
+  z-index: 900
+  width: 100%
   background-color: $color-blue
   font-size: 8px
   display: block
 
 #main-content
-  padding-top: 0
+  padding-top: $header-height
 
 // MOBILE HEADER
 #mobile-header
