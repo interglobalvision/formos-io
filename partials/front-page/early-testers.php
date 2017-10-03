@@ -29,7 +29,7 @@
       <div class="grid-item item-s-10">
         <?php echo wp_get_attachment_image($testimonial['image_id'], 'item-l-3'); ?>
       </div>
-      <h3 class="font-size-basic js-fix-widows margin-bottom-small margin-top-tiny">
+      <h3 class="js-fix-widows margin-bottom-small margin-top-tiny font-size-small">
         <?php echo apply_filters('the_content', $testimonial['quote']); ?>
       </h3>
     </div>
