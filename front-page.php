@@ -27,7 +27,7 @@ if (!empty($front_page_options['splash_title_text'])) {
   </div>
 
 
-  <div class="container margin-bottom-small text-align-center">
+  <div class="container margin-bottom-basic text-align-center">
 <?php
 
 if (!empty($front_page_options['btf_title_text'])) {

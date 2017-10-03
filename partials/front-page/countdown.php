@@ -25,7 +25,7 @@
     $minutesLeftSecondsRemainder = $hoursLeftSecondsRemainder % 60;
 ?>
 
-<div id="section-countdown" class="container margin-bottom-large">
+<div id="section-countdown" class="container margin-bottom-mid">
   <div class="grid-row">
     <div class="grid-item item-s-12 text-align-center">
       <h2 class="font-size-basic margin-bottom-small">Countdown to our Kickstarter campaign:</h2>

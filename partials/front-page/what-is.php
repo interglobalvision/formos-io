@@ -2,7 +2,7 @@
 $front_page_options = get_site_option('_igv_front_page_options');
 ?>
 
-<div id="section-what-is" class="container margin-bottom-small">
+<div id="section-what-is" class="container margin-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 item-m-10 offset-m-1 item-l-8 offset-l-2 text-align-center">
 <?php
@@ -27,7 +27,7 @@ if (!empty($front_page_options['what_is_first_text'])) {
   if (!empty($front_page_options['what_is_video']) || !empty($front_page_options['what_is_vimeo_url'])) {
 ?>
 
-<div class="container margin-bottom-small">
+<div class="container margin-bottom-basic">
   <div class="grid-row">
     <div class="grid-item item-s-12 item-m-10 offset-m-1 text-align-center">
 <?php
