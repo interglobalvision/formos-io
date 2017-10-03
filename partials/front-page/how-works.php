@@ -164,9 +164,11 @@ if (!empty($front_page_options['how_works_six_sides_title'])) {
   </div>
   <div class="grid-row">
     <div class="grid-item item-s-8 offset-s-2 item-m-6 offset-m-3 item-l-4 offset-l-4 text-align-center">
-      <video class="module-video" autoplay loop preload width="100%" muted playsinline>
-        <source src="<?php echo $front_page_options['six_sides_video'];?>" type="video/mp4">
-      </video>
+      <div class="video-wrapper">
+        <video class="module-video wrapped-video" autoplay loop preload width="100%" muted playsinline>
+          <source src="<?php echo $front_page_options['six_sides_video'];?>" type="video/mp4">
+        </video>
+      </div>
     </div>
   </div>
 </div>
