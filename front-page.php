@@ -6,6 +6,8 @@ get_header();
 
   <div id="section-top"></div>
 
+  <?php get_template_part('partials/front-page/splash-video'); ?>
+
   <div id="splash" class="container margin-bottom-basic">
     <div class="grid-row">
       <div class="grid-item item-s-12 item-l-8 offset-l-2 text-align-center">
@@ -25,9 +27,7 @@ if (!empty($front_page_options['splash_title_text'])) {
 ?>
       </div>
     </div>
-    <?php get_template_part('partials/front-page/splash-video'); ?>
   </div>
-
 
   <div class="container margin-bottom-basic text-align-center">
 <?php

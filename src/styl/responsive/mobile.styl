@@ -20,8 +20,24 @@ html, body
 video
   background-color: $color-white
 
+.wrapped-video
+  visibility: hidden
+  &.show
+    position: absolute
+    top: 50%
+    left: 50%
+    visibility: visible
+
+.video-wrapper
+  position: relative
+  overflow: hidden
+  display: inline-block
+  height: auto
+  max-width: 100%
+
 #main-content
-  padding-top: $header-height
+  position: relative
+  margin-top: $header-height
 
 // HEADER
 
@@ -94,10 +110,6 @@ video
   z-index: -1
   left: 0
   right: 0
-
-  video
-    height: calc('100vh - ' + $header-height)
-
 
 // WHAT IS SECTION
 

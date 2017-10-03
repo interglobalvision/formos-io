@@ -52,6 +52,13 @@ function igv_register_theme_options_metabox() {
     ),
   ) );
 
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Splash video ratio', 'cmb2' ),
+    'desc'    => esc_html__( 'Width ÷ Height (Required)', 'cmb2' ),
+    'id'      => 'splash_video_ratio',
+    'type'    => 'text_small',
+  ) );
+
   // BELOW THE FOLD
   $front_page_options->add_field( array(
     'name'    => esc_html__( 'Below the fold', 'cmb2' ),
@@ -282,6 +289,13 @@ function igv_register_theme_options_metabox() {
     'query_args' => array(
       'type' => 'video/mp4',
     ),
+  ) );
+
+  $front_page_options->add_field( array(
+    'name'    => esc_html__( 'Six-sides video ratio', 'cmb2' ),
+    'desc'    => esc_html__( 'Width ÷ Height (Required)', 'cmb2' ),
+    'id'      => 'six_sides_video_ratio',
+    'type'    => 'text_small',
   ) );
 
   $front_page_options->add_field( array(
