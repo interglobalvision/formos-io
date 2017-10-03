@@ -62,7 +62,7 @@ Site = {
         // is not splash video
 
         // get height of video
-        var height = $(this).height();
+        var height = $(this).parent().parent().width();
       }
 
       var width = (height * ratio);
