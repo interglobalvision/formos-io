@@ -20,7 +20,6 @@ Site = {
 
     $(document).ready(function () {
       _this.InlineVideo.init();
-      _this.Modules.init();
     });
 
   },
@@ -241,66 +240,6 @@ Site.Countdown = {
 
     return n.length >= 2 ? n : new Array(2 - n.length + 1).join('0') + n;
   },
-};
-
-Site.Modules = {
-  played: false,
-  offset: 0, // ms offset between each video play init
-  init: function() {
-    var _this = this;
-
-    _this.$videos = $('.module-video');
-
-    _this.threshold = _this.$videos.offset().top - ($(window).height() / 3) * 2;
-
-    _this.bindScroll();
-  },
-
-  bindScroll: function() {
-    var _this = this;
-
-    // On window scroll
-    $(window).on('scroll.playOnScroll', function(event) {
-      // Get the scroll position
-      var scrollTop = $(window).scrollTop();
-
-      // ...handle it
-      _this.handleScroll(scrollTop);
-    });
-  },
-
-  handleScroll: function(scrollTop) {
-    var _this = this;
-
-    if(!_this.played && scrollTop > _this.threshold) { // First video is to play and postition is below threshold
-      _this.playAnimation();
-      $(window).off('scroll.playOnScroll');
-    }
-  },
-
-  playAnimation: function() {
-    var _this = this;
-
-    _this.played = true;
-
-    _this.$videos.each( function(index) {
-      var video = this;
-
-      video.loop = true;
-
-      setTimeout( function(callback) {
-        video.play();
-
-        $(video).on('ended', function() {
-          this.loop = true;
-          _this.bindHover(this);
-        });
-      }, _this.offset * index);
-    });
-
-
-  },
-
 };
 
 Site.init();
