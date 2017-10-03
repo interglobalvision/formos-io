@@ -41,10 +41,13 @@ Site = {
   },
 
   videoWrapper: function() {
-    $('.wrapped-video').each(function() {
+    $('.wrapped-video').on('loadeddata', function() {
       $(this).css('width', 'auto');
 
       var ratio = $(this).width() / $(this).height();
+
+      console.log(ratio);
+
       var $wrapper = $(this).parent('.video-wrapper');
 
       if ($(this).hasClass('splash-video')) {
