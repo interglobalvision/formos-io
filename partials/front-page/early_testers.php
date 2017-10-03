@@ -91,12 +91,12 @@
       <h2 class="font-size-basic js-fix-widows">
           <?php echo apply_filters('the_content', $front_page_options['early_testers_video_desc']); ?>
       </h2>
-      <div id="early_testers-video-player" class="u-pointer">
-        <nav id="early_testers-video-play-trigger" class="u-flex-center">
-          <svg id="early_testers-video-play-button-svg" xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><circle cx="70" cy="70" r="70"></circle><path fill="#FFF" d="M114.824 70L42.658 28.335v83.33L114.824 70 42.658 28.335v83.33z"></path></svg>
+      <div class="inline-video-player u-pointer">
+        <nav class="inline-video-play-trigger u-flex-center">
+          <svg class="inline-video-play-button-svg" xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140"><circle cx="70" cy="70" r="70"></circle><path fill="#FFF" d="M114.824 70L42.658 28.335v83.33L114.824 70 42.658 28.335v83.33z"></path></svg>
         </nav>
-        
-        <video id="early_testers-video" preload width="100%" <?php echo !empty($front_page_options['early_testers_video_poster']) ? 'poster="' . $front_page_options['early_testers_video_poster'] . '"' : ''; ?>>
+
+        <video class="inline-video" preload width="100%" <?php echo !empty($front_page_options['early_testers_video_poster']) ? 'poster="' . $front_page_options['early_testers_video_poster'] . '"' : ''; ?>>
           <source src="<?php echo $front_page_options['early_testers_video_mp4'];?>" type="video/mp4">
         </video>
 

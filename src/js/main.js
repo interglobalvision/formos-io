@@ -15,11 +15,11 @@ Site = {
     $(window).resize(function(){
       _this.onResize();
 
-      _this.WhatIsVideo.onResize();
+      _this.InlineVideo.onResize();
     });
 
     $(document).ready(function () {
-      _this.WhatIsVideo.init();
+      _this.InlineVideo.init();
       _this.Modules.init();
     });
 
@@ -40,75 +40,80 @@ Site = {
   },
 };
 
-Site.WhatIsVideo = {
-  isVimeo: false,
+Site.InlineVideo = {
+  vimeoPlayers: [],
   init: function() {
     var _this = this;
 
-    _this.$player = $('#what-is-video-player');
+    // Iterate thru players
+    $('.inline-video-player').each(function(index,player) {
 
-    var vimeoUrl = _this.$player.attr('data-vimeo-url');
+      // Check if vimeo url exists as an attribute
+      var vimeoUrl = $(player).attr('data-vimeo-url');
 
-    if (vimeoUrl && vimeoUrl != undefined) {
-      _this.isVimeo = true;
+      if (vimeoUrl && vimeoUrl !== undefined) { // If Vimeo
+        var vimeoOptions = {
+          url: vimeoUrl,
+          title: false
+        };
 
-      var vimeoOptions = {
-        url: vimeoUrl,
-        title: false
-      };
+        _this.vimeoPlayers[index] = new Vimeo.Player(player, vimeoOptions);
 
-      _this.$vimeo = new Vimeo.Player('what-is-video-player', vimeoOptions);
-
-      _this.handleVimeo();
-    } else {
-      _this.$video = $('#what-is-video');
-
-      _this.$player.on('click', _this.handleClick.bind(_this));
-    }
+        _this.bindVimeo(_this.vimeoPlayers[index]);
+      } else { // Else is HTML video
+        $(player).on('click', _this.handleClick);
+      }
+    });
   },
 
   handleClick: function() {
-    var _this = this;
+    var $player = $(this);
+    var $video = $player.find('.inline-video');
 
-    if (_this.$player.hasClass('playing')) {
-      _this.$video[0].pause();
-      _this.$player.removeClass('playing');
+    if ($player.hasClass('playing')) {
+      $video[0].pause();
+      $player.removeClass('playing');
     } else {
-      _this.$video[0].play();
-      _this.$player.addClass('playing');
+      $video[0].play();
+      $player.addClass('playing');
     }
   },
 
-  handleVimeo: function() {
+  bindVimeo: function($player) {
     var _this = this;
 
-    _this.$vimeo.on('loaded', function() {
-      _this.$iframe = _this.$player.find('iframe');
-      _this.iframeHeight();
+    $player.on('loaded', function() {
+      _this.iframeHeight(this.element);
     });
 
-    _this.$vimeo.on('play', function() {
-      _this.$player.addClass('playing');
+    $player.on('play', function() {
+      $(this.element).parent('.inline-video-player').addClass('playing');
     });
 
-    _this.$vimeo.on('pause', function() {
-      _this.$player.removeClass('playing');
+    $player.on('pause', function() {
+      $(this.element).parent('.inline-video-player').removeClass('playing');
     });
   },
 
-  iframeHeight: function() {
-    var _this = this;
-    var iframeWidth = _this.$iframe.width();
-    var iframeHeight = (iframeWidth / 16) * 9;
+  iframeHeight: function(iframe) {
+    var $iframe = $(iframe);
+    var iframeWidth = Math.round($iframe.width());
+    var iframeHeight = iframeWidth / 16 * 9;
 
-    _this.$iframe.css('height', iframeHeight + 'px');
+    // We add 6 pixels more to the height, so the iframe fits better
+    // This is a hack by @cas
+    iframeHeight += 6;
+
+    $iframe.css('height', iframeHeight + 'px');
   },
 
   onResize: function() {
     var _this = this;
 
-    if (_this.isVimeo) {
-      _this.iframeHeight();
+    if (_this.vimeoPlayers.length > 0) {
+      $(_this.vimeoPlayers).each( function(index,player) {
+        _this.iframeHeight(player.element);
+      });
     }
   },
 };
