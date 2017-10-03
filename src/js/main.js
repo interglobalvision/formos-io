@@ -42,22 +42,36 @@ Site = {
 
   videoWrapper: function() {
     $('.wrapped-video').each(function() {
+      // the video wrapper element
       var $wrapper = $(this).parent('.video-wrapper');
+
+      // the video aspect ratio from data attr
       var ratio = $(this).attr('data-ratio');
 
       if ($(this).hasClass('splash-video')) {
+        // is splash video
+
         var windowHeight = $(window).height();
+
+        // get height of visible header (mobile or desktop)
         var headerHeight = $('.header:visible').outerHeight();
+
+        // set height of video and get height for wrapper
         var height = $(this).css('height', windowHeight - headerHeight + 'px').height();
       } else {
+        // is not splash video
+
+        // get height of video
         var height = $(this).height();
       }
 
+      // set height and width of wrapper - 5px
       $wrapper.css({
         'width': (height * ratio) - 5 + 'px',
         'height': height - 5 + 'px'
       });
 
+      // set height and width of video, set margins for absolute centering
       $(this).addClass('show').css({
         'width': (height * ratio) + 'px',
         'height': height + 'px',
