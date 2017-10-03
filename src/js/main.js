@@ -27,6 +27,7 @@ Site = {
   onResize: function() {
     var _this = this;
 
+    Site.Menu.windowWidth = $(window).width();
   },
 
   fixWidows: function() {
@@ -121,15 +122,14 @@ Site.Menu = {
   init: function() {
     var _this = this;
 
-    $mobileHeader = $('#mobile-header');
-    // mobile scrollTo offset = mobile header height + top padding + bottom padding
-    _this.mobileHeaderOffset = $mobileHeader.outerHeight() + ($mobileHeader.innerHeight() - $mobileHeader.height());
+    _this.windowWidth = $(window).width();
 
     $('.js-scrollto').on('click', function() {
       var section = $(this).data('scroll');
       var isMobile = $(this).hasClass('mobile-scrollto');
+      var headerOffset = _this.getHeaderOffset(isMobile);
 
-      _this.scrollTo(section, isMobile);
+      _this.scrollTo(section, headerOffset);
     });
 
     // Mobile Menu
@@ -140,14 +140,21 @@ Site.Menu = {
     }
   },
 
-  scrollTo: function(section, isMobile) {
+  getHeaderOffset: function(isMobile) {
     var _this = this;
-    var $target = $('#section-' + section);
-    var headerOffset = 0;
+    var $header = $('#header');
 
     if (isMobile) {
-      headerOffset = _this.mobileHeaderOffset;
+      $header = $('#mobile-header');
     }
+
+    // scrollTo offset = header height + top padding + bottom padding
+    return $header.outerHeight() + ($header.innerHeight() - $header.height());
+  },
+
+  scrollTo: function(section, headerOffset) {
+    var _this = this;
+    var $target = $('#section-' + section);
 
     $('body').removeClass('menu-open');
     $('html, body').stop().animate({ scrollTop: $target.offset().top - headerOffset }, Site.animationSpeed);
